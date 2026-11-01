@@ -274,6 +274,35 @@
     apply('all', true);
   }
 
+  /* ===== Pestañas del stack (Web, Escritorio, Móvil, Analítica) ===== */
+  function initStackTabs() {
+    var tabs = $$('.stack-tab');
+    if (!tabs.length) return;
+
+    function select(tab, focus) {
+      tabs.forEach(function (t) {
+        var active = t === tab;
+        t.setAttribute('aria-selected', active ? 'true' : 'false');
+        t.tabIndex = active ? 0 : -1;
+        var panel = doc.getElementById(t.getAttribute('aria-controls'));
+        if (panel) panel.classList.toggle('is-active', active);
+      });
+      if (focus) tab.focus();
+    }
+
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener('click', function () { select(tab); });
+      tab.addEventListener('keydown', function (e) {
+        var next = null;
+        if (e.key === 'ArrowRight') next = tabs[(i + 1) % tabs.length];
+        else if (e.key === 'ArrowLeft') next = tabs[(i - 1 + tabs.length) % tabs.length];
+        else if (e.key === 'Home') next = tabs[0];
+        else if (e.key === 'End') next = tabs[tabs.length - 1];
+        if (next) { e.preventDefault(); select(next, true); }
+      });
+    });
+  }
+
   /* ===== Formulario de contacto (Web3Forms vía fetch) ===== */
   function initContactForm() {
     var form = $('#contact-us-form');
@@ -390,12 +419,7 @@
     initSliders();
     initRevealAnimations();
     initCounters();
-    initFilter({
-      buttons: '.tech-tab-btn',
-      buttonAttr: 'data-cat',
-      items: '#tech-grid-inner .tech-card',
-      matches: function (item, value) { return item.getAttribute('data-category') === value; }
-    });
+    initStackTabs();
     initFilter({
       buttons: '#projects-filters .pf-btn',
       buttonAttr: 'data-filter',

@@ -42,7 +42,12 @@ formulario AJAX, páginas legales, 404, contadores visibles, un solo H1 y FAQ vi
       usuarios o sucursales, fecha estimada y presupuesto (opcional); cambiar el botón "Enviar" por "Solicitar diagnóstico"
 - [ ] **Proyectos**: si son demos internas, etiquetarlas como "Demo" o "Concepto"; si son de clientes, agregar cliente o sector, problema, alcance, duración y resultado
 - [ ] **Cifras de contadores** (+60 proyectos, +50 clientes, +15 migraciones): confirmar que son reales y demostrables
-- [ ] **Tech Stack**: reducirlo al stack principal y explicar que la tecnología se elige según los requisitos
+- [x] **Tech Stack**: reducirlo al stack principal y explicar que la tecnología se elige según los requisitos
+      (rehecho como 4 pestañas para perfiles no técnicos: Web, Escritorio, Móvil, Analítica e IA)
+  - [x] Confirmar las tecnologías de Escritorio (C# / .NET, C++, Java, Python) y de Analítica e IA (Python, "Machine learning", PostgreSQL, MongoDB, Elasticsearch, AWS)
+  - [x] Confirmar que se pueden cumplir los beneficios descritos: apps de escritorio sin conexión, conexión con impresoras, básculas y lectores, y pronósticos de demanda
+  - [x] (Opcional) Sustituir las ilustraciones SVG por capturas reales de sistemas cuando existan
+  - [x] Actualizar la FAQ y el JSON-LD de "¿Qué tecnologías utiliza Kernesys?" si cambia la lista de tecnologías
 - [ ] **Franja de confianza** bajo el hero (ej. "Empresa mexicana desde 2019 | Entregas por sprint | Soporte postimplementación")
 
 ## 3. Contenido nuevo

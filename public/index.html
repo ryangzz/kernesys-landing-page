@@ -281,7 +281,7 @@
             "name": "¿Qué tecnologías utiliza Kernesys?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Kernesys utiliza tecnologías modernas como Vue.js, React.js y Angular para frontend; Laravel, FastAPI, NestJS y Spring Boot para backend; Flutter para aplicaciones móviles; MySQL, PostgreSQL, MongoDB y Elasticsearch para bases de datos; y AWS para infraestructura en la nube."
+              "text": "Elegimos la tecnología según lo que necesita cada proyecto. Para sistemas web usamos Vue.js, React y Angular, con Laravel, NestJS, FastAPI y Spring Boot; para aplicaciones de escritorio, C# / .NET, C++, Java y Python; para aplicaciones móviles en iPhone y Android, Flutter; y para analítica y machine learning, Python, PostgreSQL, MongoDB y Elasticsearch. Usamos AWS para la infraestructura en la nube."
             }
           },
           {
@@ -351,126 +351,91 @@
   </noscript>
 
   <style>
-    /* ===== Tech Stack ===== */
+    /* ===== Stack: soluciones por plataforma ===== */
     .tech-stack-section {
       background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
       padding: 100px 0;
       overflow: hidden;
     }
-    .tech-tabs {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 50px;
+    .stack-tabs {
+      display: flex; justify-content: center; flex-wrap: wrap;
+      gap: 10px; margin-bottom: 44px;
     }
-    .tech-tab-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 22px;
-      border: 2px solid #d5dce6;
-      border-radius: 50px;
-      background: white;
-      color: #4a5568;
-      font-size: .95rem;
-      font-weight: 600;
-      cursor: pointer;
+    .stack-tab {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 11px 24px; border: 2px solid #d5dce6; border-radius: 50px;
+      background: #fff; color: #4a5568; font-size: .95rem; font-weight: 700;
+      cursor: pointer; font-family: 'Nunito', sans-serif;
       transition: all .3s cubic-bezier(.4,0,.2,1);
-      font-family: 'Nunito', sans-serif;
     }
-    .tech-tab-btn i { font-size: 1rem; transition: transform .3s ease; }
-    .tech-tab-btn:hover {
-      border-color: #074d7e;
-      color: #074d7e;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(7,77,126,.15);
-    }
-    .tech-tab-btn.active {
+    .stack-tab:hover { border-color: #074d7e; color: #074d7e; transform: translateY(-2px); box-shadow: 0 4px 15px rgba(7,77,126,.15); }
+    .stack-tab:focus-visible { outline: 3px solid rgba(10,107,171,.45); outline-offset: 2px; }
+    .stack-tab[aria-selected="true"] {
       background: linear-gradient(135deg,#074d7e 0%,#0a6bab 100%);
-      border-color: #074d7e;
-      color: white;
-      box-shadow: 0 6px 20px rgba(7,77,126,.3);
+      border-color: #074d7e; color: #fff; box-shadow: 0 6px 20px rgba(7,77,126,.3);
     }
-    .tech-tab-btn.active i { transform: scale(1.15); }
-    .tech-grid { margin-bottom: 60px; }
-    .tech-grid-inner {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
-      gap: 20px;
-    }
-    .tech-card {
-      position: relative;
-      border-radius: 16px;
-      background: white;
-      padding: 28px 16px;
-      text-align: center;
-      cursor: default;
-      transition: all .4s cubic-bezier(.4,0,.2,1);
+    .stack-stage {
+      display: grid; grid-template-columns: minmax(0, 1fr);
+      background: #fff; border: 1px solid #e3e9f0;
+      border-radius: 24px; box-shadow: 0 24px 60px rgba(15,40,70,.08);
       overflow: hidden;
-      border: 1px solid #e8edf2;
     }
-    .tech-card-glow {
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: var(--accent,#074d7e);
-      opacity: 0;
-      transition: all .4s ease;
+    .stack-panel {
+      grid-area: 1 / 1;
+      display: grid; grid-template-columns: 1fr 1fr; align-items: center;
+      gap: 48px; padding: 48px;
+      visibility: hidden; opacity: 0;
+      transition: opacity .45s ease, visibility 0s linear .45s;
     }
-    .tech-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(0,0,0,.08);
-      border-color: transparent;
+    .stack-panel.is-active { visibility: visible; opacity: 1; transition: opacity .45s ease .1s, visibility 0s; }
+    .stack-visual {
+      position: relative; border-radius: 20px; padding: 32px;
+      background: var(--panel-bg);
+      aspect-ratio: 5 / 4; display: flex; align-items: center; justify-content: center;
+      transform: translateX(-30px); transition: transform .6s cubic-bezier(.2,.8,.2,1);
     }
-    .tech-card:hover .tech-card-glow { opacity: 1; height: 4px; }
-    .tech-card-content { position: relative; z-index: 1; }
-    .tech-icon-wrapper {
-      width: 64px; height: 64px;
-      margin: 0 auto 16px;
-      display: flex; align-items: center; justify-content: center;
-      border-radius: 16px;
-      background: linear-gradient(135deg,#f0f4f8 0%,#e2e8f0 100%);
-      transition: all .4s ease;
+    .stack-visual svg { width: 100%; height: 100%; filter: drop-shadow(0 18px 30px rgba(10,40,80,.18)); }
+    .stack-content { transform: translateX(30px); transition: transform .6s cubic-bezier(.2,.8,.2,1); }
+    .stack-panel.is-active .stack-visual,
+    .stack-panel.is-active .stack-content { transform: none; }
+    .stack-kicker {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: .78rem; font-weight: 800; letter-spacing: .8px; text-transform: uppercase;
+      color: var(--accent); background: var(--accent-soft);
+      padding: 6px 14px; border-radius: 30px; margin-bottom: 16px;
     }
-    .tech-card:hover .tech-icon-wrapper {
-      transform: scale(1.1);
-      background: linear-gradient(135deg,#e8f4fd 0%,#dbeafe 100%);
+    .stack-title { font-size: 1.75rem; font-weight: 800; color: #1a202c; line-height: 1.25; margin-bottom: 14px; }
+    .stack-lead { font-size: 1rem; line-height: 1.75; color: #4a5568; margin-bottom: 22px; }
+    .stack-benefits { list-style: none; padding: 0; margin: 0 0 26px; display: grid; gap: 12px; }
+    .stack-benefits li { display: flex; gap: 12px; font-size: .95rem; line-height: 1.55; color: #2d3748; }
+    .stack-benefits li i {
+      flex: 0 0 26px; height: 26px; border-radius: 8px; margin-top: 1px;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: .75rem; color: var(--accent); background: var(--accent-soft);
     }
-    .tech-icon-wrapper i { font-size: 1.8rem; transition: all .3s ease; }
-    .tech-card:hover .tech-icon-wrapper i { transform: scale(1.1); }
-    .tech-name { font-size: .95rem; font-weight: 700; color: #1a202c; margin-bottom: 6px; letter-spacing: -.01em; }
-    .tech-category-badge {
-      display: inline-block;
-      font-size: .7rem; font-weight: 600; color: #718096;
-      background: #f1f5f9; padding: 3px 10px; border-radius: 20px;
-      text-transform: uppercase; letter-spacing: .5px;
+    .stack-tools-label { font-size: .78rem; font-weight: 700; color: #718096; text-transform: uppercase; letter-spacing: .6px; margin-bottom: 10px; }
+    .stack-tools { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+    .stack-tools li {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: .82rem; font-weight: 700; color: #334155;
+      background: #f1f5f9; border: 1px solid #e2e8f0; padding: 5px 12px; border-radius: 20px;
     }
-    .tech-desc-card {
-      background: white; border-radius: 20px; padding: 32px 28px;
-      height: 100%; position: relative; overflow: hidden;
-      border: 1px solid #e8edf2;
-      transition: all .4s cubic-bezier(.4,0,.2,1);
+    .stack-tools li i { color: var(--accent); }
+    .stack-note { text-align: center; color: #64748b; font-size: .95rem; margin: 32px auto 0; max-width: 680px; }
+    .stack-note i { color: #0a6bab; margin-right: 6px; }
+    @media (max-width: 991px) {
+      .stack-panel { grid-template-columns: 1fr; gap: 28px; padding: 28px; }
+      .stack-visual { aspect-ratio: 16 / 10; max-width: 520px; width: 100%; margin: 0 auto; padding: 20px; }
+      .stack-title { font-size: 1.45rem; }
     }
-    .tech-desc-card::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0; height: 4px;
-      background: var(--cat-color,#074d7e); opacity: .8;
+    @media (max-width: 576px) {
+      .tech-stack-section { padding: 70px 0; }
+      .stack-tab { padding: 9px 16px; font-size: .88rem; }
+      .stack-panel { padding: 20px; }
     }
-    .tech-desc-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 40px rgba(0,0,0,.08);
-      border-color: transparent;
+    @media (prefers-reduced-motion: reduce) {
+      .stack-panel, .stack-visual, .stack-content { transition: none !important; transform: none !important; }
     }
-    .tech-desc-icon {
-      width: 52px; height: 52px; border-radius: 14px;
-      background: linear-gradient(135deg,#074d7e 0%,#0a6bab 100%);
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 20px;
-    }
-    .tech-desc-icon i { font-size: 1.3rem; color: white; }
-    .tech-desc-title { font-size: 1.15rem; font-weight: 800; color: #1a202c; margin-bottom: 12px; }
-    .tech-desc-text { font-size: .9rem; line-height: 1.7; color: #64748b; margin-bottom: 0; }
     /* ===== WhatsApp Float ===== */
     .whatsapp-float {
       position: fixed; right: 22px; bottom: 95px;
@@ -541,7 +506,6 @@
     .filter-in { animation: kxFilterIn .35s ease both; }
 
     /* Mantener el aspecto previo tras ajustar la jerarquía de encabezados */
-    .tech-name,
     .footer-col-title,
     .about .about-stats .stat-box .stat-desc { line-height: 1.2; }
 
@@ -1302,314 +1266,277 @@
       <div class="section-heading center-heading">
         <h2 class="section-title2 wow" data-splitting="chars">Nuestro Stack Tecnológico</h2>
         <p class="section-subtitle wow fadeInUp" data-wow-delay=".5s">
-          Combinamos las tecnologías más potentes y modernas del mercado para construir soluciones
-          robustas, escalables y de alto rendimiento.
+          Creamos software para donde tu equipo y tus clientes lo necesitan: en el navegador, en la computadora,
+          en el celular o en tus reportes de negocio.
         </p>
         <div class="line line-solid-main-color wow fadeIn" data-wow-delay="1s"></div>
       </div>
 
-      <!-- Tabs de categoría -->
-      <div class="tech-tabs wow fadeInUp" data-wow-delay="0.3s" role="group" aria-label="Filtrar tecnologías por categoría">
-        <button type="button" class="tech-tab-btn active" data-cat="all">
-          <i class="fas fa-th"></i><span>Todos</span>
+      <div class="stack-tabs wow fadeInUp" data-wow-delay="0.3s" role="tablist" aria-label="Tipos de solución">
+        <button type="button" class="stack-tab" role="tab" id="stack-tab-web" aria-controls="stack-panel-web" aria-selected="true">
+          <i class="fas fa-globe" aria-hidden="true"></i><span>Web</span>
         </button>
-        <button type="button" class="tech-tab-btn" data-cat="frontend">
-          <i class="fas fa-palette"></i><span>Frontend</span>
+        <button type="button" class="stack-tab" role="tab" id="stack-tab-desktop" aria-controls="stack-panel-desktop" aria-selected="false" tabindex="-1">
+          <i class="fas fa-desktop" aria-hidden="true"></i><span>Escritorio</span>
         </button>
-        <button type="button" class="tech-tab-btn" data-cat="backend">
-          <i class="fas fa-server"></i><span>Backend</span>
+        <button type="button" class="stack-tab" role="tab" id="stack-tab-mobile" aria-controls="stack-panel-mobile" aria-selected="false" tabindex="-1">
+          <i class="fas fa-mobile-alt" aria-hidden="true"></i><span>Móvil</span>
         </button>
-        <button type="button" class="tech-tab-btn" data-cat="mobile">
-          <i class="fas fa-mobile-alt"></i><span>Móvil</span>
-        </button>
-        <button type="button" class="tech-tab-btn" data-cat="database">
-          <i class="fas fa-database"></i><span>Bases de Datos</span>
-        </button>
-        <button type="button" class="tech-tab-btn" data-cat="devops">
-          <i class="fas fa-cloud"></i><span>Cloud &amp; DevOps</span>
+        <button type="button" class="stack-tab" role="tab" id="stack-tab-data" aria-controls="stack-panel-data" aria-selected="false" tabindex="-1">
+          <i class="fas fa-chart-line" aria-hidden="true"></i><span>Analítica e IA</span>
         </button>
       </div>
 
-      <!-- Grid de tecnologías -->
-      <div class="tech-grid wow fadeInUp" data-wow-delay="0.4s">
-        <div class="tech-grid-inner" id="tech-grid-inner">
-          <!-- Frontend -->
-          <div class="tech-card" data-category="frontend" style="--accent:#42b883">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fab fa-vuejs" style="color:#42b883"></i></div>
-              <p class="tech-name">Vue.js</p>
-              <span class="tech-category-badge">Frontend</span>
-            </div>
+      <div class="stack-stage wow fadeInUp" data-wow-delay="0.4s">
+
+        <!-- Web -->
+        <div class="stack-panel is-active" role="tabpanel" id="stack-panel-web" aria-labelledby="stack-tab-web"
+             style="--accent:#0a6bab;--accent-soft:#e6f1fa;--panel-bg:linear-gradient(135deg,#dcecf9 0%,#b9d8f1 100%)">
+          <div class="stack-visual" aria-hidden="true">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="20" width="380" height="260" rx="14" fill="#fff"/>
+              <rect x="10" y="20" width="380" height="34" rx="14" fill="#eef3f8"/>
+              <rect x="10" y="40" width="380" height="14" fill="#eef3f8"/>
+              <circle cx="32" cy="37" r="5" fill="#ff6b6b"/><circle cx="48" cy="37" r="5" fill="#ffc84a"/><circle cx="64" cy="37" r="5" fill="#4cd07d"/>
+              <rect x="90" y="29" width="210" height="16" rx="8" fill="#fff"/>
+              <rect x="102" y="35" width="90" height="4" rx="2" fill="#c3d2e2"/>
+              <path d="M10 54 H88 V280 H24 a14 14 0 0 1 -14 -14 Z" fill="#074d7e"/>
+              <rect x="24" y="72" width="50" height="6" rx="3" fill="#ffffff" opacity=".9"/>
+              <rect x="24" y="96" width="44" height="5" rx="2.5" fill="#ffffff" opacity=".45"/>
+              <rect x="24" y="114" width="50" height="5" rx="2.5" fill="#ffffff" opacity=".45"/>
+              <rect x="24" y="132" width="38" height="5" rx="2.5" fill="#ffffff" opacity=".45"/>
+              <rect x="24" y="150" width="46" height="5" rx="2.5" fill="#ffffff" opacity=".45"/>
+              <rect x="104" y="70" width="88" height="54" rx="10" fill="#e6f1fa"/>
+              <rect x="114" y="82" width="40" height="5" rx="2.5" fill="#8fb3d1"/>
+              <rect x="114" y="96" width="56" height="12" rx="4" fill="#0a6bab"/>
+              <rect x="200" y="70" width="88" height="54" rx="10" fill="#e9f8ef"/>
+              <rect x="210" y="82" width="40" height="5" rx="2.5" fill="#8cc9a3"/>
+              <rect x="210" y="96" width="48" height="12" rx="4" fill="#2fa865"/>
+              <rect x="296" y="70" width="80" height="54" rx="10" fill="#fff4e3"/>
+              <rect x="306" y="82" width="40" height="5" rx="2.5" fill="#e2bf87"/>
+              <rect x="306" y="96" width="44" height="12" rx="4" fill="#f0a020"/>
+              <rect x="104" y="136" width="272" height="128" rx="10" fill="#f7fafc" stroke="#e5ecf3"/>
+              <polyline points="120,236 160,214 196,222 232,186 270,196 306,160 356,150" fill="none" stroke="#0a6bab" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <polygon points="120,236 160,214 196,222 232,186 270,196 306,160 356,150 356,252 120,252" fill="#0a6bab" opacity=".1"/>
+              <circle cx="306" cy="160" r="6" fill="#fff" stroke="#0a6bab" stroke-width="3"/>
+            </svg>
           </div>
-          <div class="tech-card" data-category="frontend" style="--accent:#61DAFB">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fab fa-react" style="color:#61DAFB"></i></div>
-              <p class="tech-name">React.js</p>
-              <span class="tech-category-badge">Frontend</span>
-            </div>
+          <div class="stack-content">
+            <span class="stack-kicker"><i class="fas fa-globe" aria-hidden="true"></i>Sistemas web</span>
+            <h3 class="stack-title">Tu operación en el navegador, desde cualquier lugar</h3>
+            <p class="stack-lead">
+              Portales, sistemas administrativos y plataformas para clientes que se abren con un enlace.
+              Sin instalar nada: tu equipo entra desde la oficina, la bodega o la casa.
+            </p>
+            <ul class="stack-benefits">
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>ERP, CRM, inventarios y paneles de control hechos a la medida de tus procesos.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Accesos por usuario y rol, para que cada persona vea solo lo que le corresponde.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Conexión con tus sistemas actuales, facturación, pagos y otras plataformas.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Se adapta a computadora, tableta y celular.</span></li>
+            </ul>
+            <p class="stack-tools-label">Tecnologías que usamos</p>
+            <ul class="stack-tools">
+              <li><i class="fab fa-vuejs" aria-hidden="true"></i>Vue.js</li>
+              <li><i class="fab fa-react" aria-hidden="true"></i>React</li>
+              <li><i class="fab fa-angular" aria-hidden="true"></i>Angular</li>
+              <li><i class="fab fa-laravel" aria-hidden="true"></i>Laravel</li>
+              <li><i class="fab fa-node-js" aria-hidden="true"></i>NestJS</li>
+              <li><i class="fab fa-python" aria-hidden="true"></i>FastAPI</li>
+              <li><i class="fab fa-java" aria-hidden="true"></i>Spring Boot</li>
+              <li><i class="fab fa-aws" aria-hidden="true"></i>AWS</li>
+            </ul>
           </div>
-          <div class="tech-card" data-category="frontend" style="--accent:#DD0031">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fab fa-angular" style="color:#DD0031"></i></div>
-              <p class="tech-name">Angular</p>
-              <span class="tech-category-badge">Frontend</span>
-            </div>
+        </div>
+
+        <!-- Escritorio -->
+        <div class="stack-panel" role="tabpanel" id="stack-panel-desktop" aria-labelledby="stack-tab-desktop"
+             style="--accent:#5b4bc4;--accent-soft:#eeebfb;--panel-bg:linear-gradient(135deg,#e7e3fb 0%,#cdc5f3 100%)">
+          <div class="stack-visual" aria-hidden="true">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <rect x="40" y="10" width="320" height="214" rx="12" fill="#2d3348"/>
+              <rect x="52" y="22" width="296" height="190" rx="4" fill="#fff"/>
+              <rect x="52" y="22" width="296" height="22" fill="#5b4bc4"/>
+              <rect x="62" y="30" width="60" height="6" rx="3" fill="#fff" opacity=".85"/>
+              <rect x="318" y="30" width="8" height="6" rx="1" fill="#fff" opacity=".6"/><rect x="330" y="30" width="8" height="6" rx="1" fill="#fff" opacity=".6"/>
+              <rect x="52" y="44" width="296" height="20" fill="#f3f1fd"/>
+              <rect x="62" y="50" width="28" height="8" rx="2" fill="#cfc8f3"/><rect x="96" y="50" width="28" height="8" rx="2" fill="#cfc8f3"/><rect x="130" y="50" width="28" height="8" rx="2" fill="#cfc8f3"/>
+              <rect x="62" y="74" width="180" height="12" rx="3" fill="#ece9f8"/>
+              <g fill="#d9dee6">
+                <rect x="62" y="96" width="180" height="1"/><rect x="62" y="116" width="180" height="1"/><rect x="62" y="136" width="180" height="1"/><rect x="62" y="156" width="180" height="1"/><rect x="62" y="176" width="180" height="1"/>
+              </g>
+              <g fill="#a8b2c2">
+                <rect x="68" y="103" width="50" height="5" rx="2"/><rect x="140" y="103" width="36" height="5" rx="2"/><rect x="200" y="103" width="30" height="5" rx="2"/>
+                <rect x="68" y="123" width="42" height="5" rx="2"/><rect x="140" y="123" width="30" height="5" rx="2"/><rect x="200" y="123" width="30" height="5" rx="2"/>
+                <rect x="68" y="143" width="56" height="5" rx="2"/><rect x="140" y="143" width="40" height="5" rx="2"/><rect x="200" y="143" width="30" height="5" rx="2"/>
+                <rect x="68" y="163" width="46" height="5" rx="2"/><rect x="140" y="163" width="34" height="5" rx="2"/><rect x="200" y="163" width="30" height="5" rx="2"/>
+              </g>
+              <rect x="62" y="116" width="180" height="20" fill="#5b4bc4" opacity=".1"/>
+              <rect x="254" y="74" width="84" height="128" rx="6" fill="#f7f6fe" stroke="#e3dff8"/>
+              <rect x="264" y="86" width="50" height="5" rx="2" fill="#a59ce0"/>
+              <text x="264" y="118" font-family="Nunito, sans-serif" font-size="20" font-weight="800" fill="#2d3348">$1,280</text>
+              <rect x="264" y="130" width="64" height="4" rx="2" fill="#d9d4f5"/>
+              <rect x="264" y="140" width="48" height="4" rx="2" fill="#d9d4f5"/>
+              <rect x="264" y="172" width="64" height="20" rx="5" fill="#5b4bc4"/>
+              <rect x="280" y="180" width="32" height="4" rx="2" fill="#fff"/>
+              <rect x="62" y="190" width="70" height="14" rx="4" fill="#ece9f8"/>
+              <path d="M170 224 h60 l10 40 h-80 z" fill="#3b4258"/>
+              <rect x="130" y="262" width="140" height="10" rx="5" fill="#2d3348"/>
+              <circle cx="330" cy="250" r="24" fill="#fff"/>
+              <path d="M318 250 l8 8 l16 -16" fill="none" stroke="#2fa865" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </div>
-          <div class="tech-card" data-category="frontend" style="--accent:#F7DF1E">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fab fa-js-square" style="color:#F7DF1E"></i></div>
-              <p class="tech-name">JavaScript</p>
-              <span class="tech-category-badge">Frontend</span>
-            </div>
+          <div class="stack-content">
+            <span class="stack-kicker"><i class="fas fa-desktop" aria-hidden="true"></i>Aplicaciones de escritorio</span>
+            <h3 class="stack-title">Programas potentes que trabajan aunque falle el internet</h3>
+            <p class="stack-lead">
+              Software instalado en las computadoras de tu empresa para puntos de venta, producción y
+              estaciones de trabajo que necesitan rapidez y control del equipo local.
+            </p>
+            <ul class="stack-benefits">
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Puntos de venta, control de producción y sistemas para mostrador.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Funcionan sin conexión y se sincronizan cuando vuelve el internet.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Conexión con impresoras de tickets, básculas, lectores de código y otros equipos.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Renovación de programas antiguos que ya frenan a tu equipo.</span></li>
+            </ul>
+            <p class="stack-tools-label">Tecnologías que usamos</p>
+            <ul class="stack-tools">
+              <li><i class="fab fa-windows" aria-hidden="true"></i>C# / .NET</li>
+              <li><i class="fas fa-microchip" aria-hidden="true"></i>C++</li>
+              <li><i class="fab fa-java" aria-hidden="true"></i>Java</li>
+              <li><i class="fab fa-python" aria-hidden="true"></i>Python</li>
+              <li><i class="fas fa-database" aria-hidden="true"></i>MySQL</li>
+              <li><i class="fas fa-database" aria-hidden="true"></i>PostgreSQL</li>
+            </ul>
           </div>
-          <div class="tech-card" data-category="frontend" style="--accent:#E34F26">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fab fa-html5" style="color:#E34F26"></i></div>
-              <p class="tech-name">HTML5</p>
-              <span class="tech-category-badge">Frontend</span>
-            </div>
+        </div>
+
+        <!-- Móvil -->
+        <div class="stack-panel" role="tabpanel" id="stack-panel-mobile" aria-labelledby="stack-tab-mobile"
+             style="--accent:#0f8a6a;--accent-soft:#e3f6f0;--panel-bg:linear-gradient(135deg,#d8f3ea 0%,#ade3d1 100%)">
+          <div class="stack-visual" aria-hidden="true">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <rect x="130" y="6" width="140" height="288" rx="26" fill="#1f2937"/>
+              <rect x="140" y="16" width="120" height="268" rx="18" fill="#fff"/>
+              <rect x="180" y="22" width="40" height="8" rx="4" fill="#1f2937"/>
+              <rect x="140" y="38" width="120" height="54" fill="#0f8a6a"/>
+              <rect x="152" y="50" width="46" height="6" rx="3" fill="#fff" opacity=".7"/>
+              <rect x="152" y="64" width="72" height="12" rx="4" fill="#fff"/>
+              <g>
+                <rect x="150" y="104" width="100" height="38" rx="8" fill="#f2f7f5"/>
+                <circle cx="166" cy="123" r="9" fill="#bfe7da"/>
+                <rect x="182" y="116" width="50" height="5" rx="2.5" fill="#7fae9f"/><rect x="182" y="127" width="34" height="4" rx="2" fill="#c7dcd5"/>
+                <rect x="150" y="150" width="100" height="38" rx="8" fill="#f2f7f5"/>
+                <circle cx="166" cy="169" r="9" fill="#bfe7da"/>
+                <rect x="182" y="162" width="44" height="5" rx="2.5" fill="#7fae9f"/><rect x="182" y="173" width="30" height="4" rx="2" fill="#c7dcd5"/>
+                <rect x="150" y="196" width="100" height="38" rx="8" fill="#f2f7f5"/>
+                <circle cx="166" cy="215" r="9" fill="#bfe7da"/>
+                <rect x="182" y="208" width="52" height="5" rx="2.5" fill="#7fae9f"/><rect x="182" y="219" width="28" height="4" rx="2" fill="#c7dcd5"/>
+              </g>
+              <rect x="150" y="246" width="100" height="24" rx="12" fill="#0f8a6a"/>
+              <rect x="180" y="256" width="40" height="4" rx="2" fill="#fff"/>
+              <rect x="10" y="60" width="122" height="46" rx="12" fill="#fff"/>
+              <circle cx="32" cy="83" r="11" fill="#0f8a6a"/>
+              <path d="M27 83 l4 4 l7 -8" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="50" y="74" width="66" height="6" rx="3" fill="#4b5563"/><rect x="50" y="86" width="48" height="5" rx="2.5" fill="#cbd5e1"/>
+              <rect x="276" y="176" width="114" height="74" rx="12" fill="#fff"/>
+              <path d="M300 196 c0 -10 16 -10 16 0 c0 8 -8 16 -8 16 s-8 -8 -8 -16 z" fill="#f05a5a"/>
+              <circle cx="308" cy="196" r="3" fill="#fff"/>
+              <rect x="326" y="192" width="50" height="5" rx="2.5" fill="#4b5563"/><rect x="326" y="203" width="36" height="4" rx="2" fill="#cbd5e1"/>
+              <rect x="290" y="222" width="86" height="16" rx="8" fill="#e3f6f0"/>
+              <rect x="290" y="222" width="58" height="16" rx="8" fill="#0f8a6a"/>
+            </svg>
           </div>
-          <div class="tech-card" data-category="frontend" style="--accent:#1572B6">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fab fa-css3-alt" style="color:#1572B6"></i></div>
-              <p class="tech-name">CSS3</p>
-              <span class="tech-category-badge">Frontend</span>
-            </div>
+          <div class="stack-content">
+            <span class="stack-kicker"><i class="fas fa-mobile-alt" aria-hidden="true"></i>Aplicaciones móviles</span>
+            <h3 class="stack-title">Tu negocio en el bolsillo de tus clientes y de tu equipo</h3>
+            <p class="stack-lead">
+              Apps para iPhone y Android, para tus clientes o para tu personal en campo: vendedores,
+              repartidores, técnicos y supervisores.
+            </p>
+            <ul class="stack-benefits">
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Una sola app para iPhone y Android, lo que reduce tiempo y costo.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Pedidos, rutas de entrega, levantamiento de datos y evidencias con foto.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Notificaciones, ubicación GPS y lectura de códigos con la cámara.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Publicación en App Store y Google Play.</span></li>
+            </ul>
+            <p class="stack-tools-label">Tecnologías que usamos</p>
+            <ul class="stack-tools">
+              <li><i class="fas fa-feather-alt" aria-hidden="true"></i>Flutter</li>
+              <li><i class="fab fa-android" aria-hidden="true"></i>Android</li>
+              <li><i class="fab fa-apple" aria-hidden="true"></i>iOS</li>
+              <li><i class="fas fa-plug" aria-hidden="true"></i>APIs con Laravel y NestJS</li>
+            </ul>
           </div>
-          <div class="tech-card" data-category="frontend" style="--accent:#9553E9">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fas fa-bolt" style="color:#9553E9"></i></div>
-              <p class="tech-name">Inertia.js</p>
-              <span class="tech-category-badge">Frontend</span>
-            </div>
+        </div>
+
+        <!-- Analítica e IA -->
+        <div class="stack-panel" role="tabpanel" id="stack-panel-data" aria-labelledby="stack-tab-data"
+             style="--accent:#c0661a;--accent-soft:#fdf0e3;--panel-bg:linear-gradient(135deg,#fdebd7 0%,#f8cfa6 100%)">
+          <div class="stack-visual" aria-hidden="true">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="14" width="380" height="272" rx="14" fill="#fff"/>
+              <rect x="28" y="32" width="120" height="8" rx="4" fill="#3b4258"/>
+              <rect x="28" y="46" width="80" height="5" rx="2.5" fill="#cbd5e1"/>
+              <rect x="28" y="70" width="210" height="136" rx="10" fill="#fbf7f2"/>
+              <g fill="#f2b37a">
+                <rect x="46" y="150" width="18" height="40" rx="3"/>
+                <rect x="74" y="130" width="18" height="60" rx="3"/>
+                <rect x="102" y="140" width="18" height="50" rx="3"/>
+                <rect x="130" y="112" width="18" height="78" rx="3"/>
+              </g>
+              <g fill="#c0661a">
+                <rect x="158" y="100" width="18" height="90" rx="3" opacity=".35"/>
+                <rect x="186" y="86" width="18" height="104" rx="3" opacity=".35"/>
+              </g>
+              <polyline points="55,146 83,126 111,134 139,106 167,92 195,76" fill="none" stroke="#c0661a" stroke-width="3" stroke-linecap="round"/>
+              <line x1="148" y1="80" x2="148" y2="196" stroke="#c0661a" stroke-dasharray="4 4" opacity=".6"/>
+              <rect x="152" y="76" width="64" height="16" rx="8" fill="#c0661a"/>
+              <text x="160" y="88" font-family="Nunito, sans-serif" font-size="10" font-weight="800" fill="#fff">Pronóstico</text>
+              <circle cx="310" cy="128" r="54" fill="none" stroke="#f6dfc8" stroke-width="20"/>
+              <circle cx="310" cy="128" r="54" fill="none" stroke="#c0661a" stroke-width="20" stroke-dasharray="220 340" transform="rotate(-90 310 128)"/>
+              <circle cx="310" cy="128" r="54" fill="none" stroke="#f2b37a" stroke-width="20" stroke-dasharray="70 340" stroke-dashoffset="-220" transform="rotate(-90 310 128)"/>
+              <text x="310" y="134" text-anchor="middle" font-family="Nunito, sans-serif" font-size="18" font-weight="800" fill="#3b4258">72%</text>
+              <rect x="28" y="222" width="108" height="48" rx="10" fill="#fdf0e3"/>
+              <rect x="40" y="234" width="50" height="5" rx="2.5" fill="#e0a877"/>
+              <text x="40" y="260" font-family="Nunito, sans-serif" font-size="15" font-weight="800" fill="#3b4258">+18%</text>
+              <rect x="146" y="222" width="108" height="48" rx="10" fill="#fdf0e3"/>
+              <rect x="158" y="234" width="50" height="5" rx="2.5" fill="#e0a877"/>
+              <text x="158" y="260" font-family="Nunito, sans-serif" font-size="15" font-weight="800" fill="#3b4258">1,240</text>
+              <rect x="264" y="222" width="108" height="48" rx="10" fill="#c0661a"/>
+              <rect x="276" y="234" width="50" height="5" rx="2.5" fill="#fff" opacity=".7"/>
+              <path d="M278 258 l8 -8 l6 6 l12 -12" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </div>
-          <!-- Backend -->
-          <div class="tech-card" data-category="backend" style="--accent:#FF2D20">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fab fa-laravel" style="color:#FF2D20"></i></div>
-              <p class="tech-name">Laravel</p>
-              <span class="tech-category-badge">Backend</span>
-            </div>
-          </div>
-          <div class="tech-card" data-category="backend" style="--accent:#777BB4">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fab fa-php" style="color:#777BB4"></i></div>
-              <p class="tech-name">PHP</p>
-              <span class="tech-category-badge">Backend</span>
-            </div>
-          </div>
-          <div class="tech-card" data-category="backend" style="--accent:#E0234E">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fab fa-node-js" style="color:#E0234E"></i></div>
-              <p class="tech-name">NestJS</p>
-              <span class="tech-category-badge">Backend</span>
-            </div>
-          </div>
-          <div class="tech-card" data-category="backend" style="--accent:#3776AB">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fab fa-python" style="color:#3776AB"></i></div>
-              <p class="tech-name">Python</p>
-              <span class="tech-category-badge">Backend</span>
-            </div>
-          </div>
-          <div class="tech-card" data-category="backend" style="--accent:#092E20">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fab fa-python" style="color:#092E20"></i></div>
-              <p class="tech-name">Django</p>
-              <span class="tech-category-badge">Backend</span>
-            </div>
-          </div>
-          <div class="tech-card" data-category="backend" style="--accent:#009688">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fab fa-python" style="color:#009688"></i></div>
-              <p class="tech-name">FastAPI</p>
-              <span class="tech-category-badge">Backend</span>
-            </div>
-          </div>
-          <div class="tech-card" data-category="backend" style="--accent:#ED8B00">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fab fa-java" style="color:#ED8B00"></i></div>
-              <p class="tech-name">Java</p>
-              <span class="tech-category-badge">Backend</span>
-            </div>
-          </div>
-          <div class="tech-card" data-category="backend" style="--accent:#6DB33F">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fab fa-java" style="color:#6DB33F"></i></div>
-              <p class="tech-name">Spring Boot</p>
-              <span class="tech-category-badge">Backend</span>
-            </div>
-          </div>
-          <div class="tech-card" data-category="backend" style="--accent:#68217A">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fas fa-code" style="color:#68217A"></i></div>
-              <p class="tech-name">C#</p>
-              <span class="tech-category-badge">Backend</span>
-            </div>
-          </div>
-          <div class="tech-card" data-category="backend" style="--accent:#00599C">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fas fa-code" style="color:#00599C"></i></div>
-              <p class="tech-name">C++</p>
-              <span class="tech-category-badge">Backend</span>
-            </div>
-          </div>
-          <!-- Móvil -->
-          <div class="tech-card" data-category="mobile" style="--accent:#027DFD">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fas fa-mobile-alt" style="color:#027DFD"></i></div>
-              <p class="tech-name">Flutter</p>
-              <span class="tech-category-badge">Móvil</span>
-            </div>
-          </div>
-          <div class="tech-card" data-category="mobile" style="--accent:#3DDC84">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fab fa-android" style="color:#3DDC84"></i></div>
-              <p class="tech-name">Android</p>
-              <span class="tech-category-badge">Móvil</span>
-            </div>
-          </div>
-          <div class="tech-card" data-category="mobile" style="--accent:#999999">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fab fa-apple" style="color:#999999"></i></div>
-              <p class="tech-name">iOS</p>
-              <span class="tech-category-badge">Móvil</span>
-            </div>
-          </div>
-          <!-- Bases de datos -->
-          <div class="tech-card" data-category="database" style="--accent:#4479A1">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fas fa-database" style="color:#4479A1"></i></div>
-              <p class="tech-name">MySQL</p>
-              <span class="tech-category-badge">Base de Datos</span>
-            </div>
-          </div>
-          <div class="tech-card" data-category="database" style="--accent:#336791">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fas fa-database" style="color:#336791"></i></div>
-              <p class="tech-name">PostgreSQL</p>
-              <span class="tech-category-badge">Base de Datos</span>
-            </div>
-          </div>
-          <div class="tech-card" data-category="database" style="--accent:#47A248">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fas fa-leaf" style="color:#47A248"></i></div>
-              <p class="tech-name">MongoDB</p>
-              <span class="tech-category-badge">Base de Datos</span>
-            </div>
-          </div>
-          <div class="tech-card" data-category="database" style="--accent:#FEC514">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fas fa-search" style="color:#FEC514"></i></div>
-              <p class="tech-name">Elasticsearch</p>
-              <span class="tech-category-badge">Base de Datos</span>
-            </div>
-          </div>
-          <!-- Cloud & DevOps -->
-          <div class="tech-card" data-category="devops" style="--accent:#FF9900">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fab fa-aws" style="color:#FF9900"></i></div>
-              <p class="tech-name">AWS</p>
-              <span class="tech-category-badge">Cloud &amp; DevOps</span>
-            </div>
-          </div>
-          <div class="tech-card" data-category="devops" style="--accent:#2496ED">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fab fa-docker" style="color:#2496ED"></i></div>
-              <p class="tech-name">Docker</p>
-              <span class="tech-category-badge">Cloud &amp; DevOps</span>
-            </div>
-          </div>
-          <div class="tech-card" data-category="devops" style="--accent:#F05032">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fab fa-git-alt" style="color:#F05032"></i></div>
-              <p class="tech-name">Git</p>
-              <span class="tech-category-badge">Cloud &amp; DevOps</span>
-            </div>
-          </div>
-          <div class="tech-card" data-category="devops" style="--accent:#FCC624">
-            <div class="tech-card-glow"></div>
-            <div class="tech-card-content">
-              <div class="tech-icon-wrapper"><i class="fab fa-linux" style="color:#FCC624"></i></div>
-              <p class="tech-name">Linux</p>
-              <span class="tech-category-badge">Cloud &amp; DevOps</span>
-            </div>
+          <div class="stack-content">
+            <span class="stack-kicker"><i class="fas fa-chart-line" aria-hidden="true"></i>Business analytics y machine learning</span>
+            <h3 class="stack-title">Convierte tus datos en decisiones</h3>
+            <p class="stack-lead">
+              Reunimos la información que hoy está dispersa en hojas de cálculo y sistemas, y la convertimos
+              en tableros claros e indicadores que te dicen qué está pasando y qué viene.
+            </p>
+            <ul class="stack-benefits">
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Tableros con ventas, inventario y productividad, actualizados sin trabajo manual.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Pronósticos de demanda para comprar y producir lo justo.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Alertas automáticas cuando algo se sale de lo normal.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Búsquedas rápidas sobre grandes volúmenes de información.</span></li>
+            </ul>
+            <p class="stack-tools-label">Tecnologías que usamos</p>
+            <ul class="stack-tools">
+              <li><i class="fab fa-python" aria-hidden="true"></i>Python</li>
+              <li><i class="fas fa-brain" aria-hidden="true"></i>Machine learning</li>
+              <li><i class="fas fa-database" aria-hidden="true"></i>PostgreSQL</li>
+              <li><i class="fas fa-leaf" aria-hidden="true"></i>MongoDB</li>
+              <li><i class="fas fa-search" aria-hidden="true"></i>Elasticsearch</li>
+              <li><i class="fab fa-aws" aria-hidden="true"></i>AWS</li>
+            </ul>
           </div>
         </div>
       </div>
 
-      <!-- Tarjetas descriptivas por categoría -->
-      <div class="tech-descriptions wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row g-4">
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="tech-desc-card" style="--cat-color:#42b883">
-              <div class="tech-desc-icon"><i class="fas fa-palette"></i></div>
-              <h3 class="tech-desc-title">Frontend</h3>
-              <p class="tech-desc-text">Creamos interfaces modernas, interactivas y completamente responsivas con las mejores
-                tecnologías del ecosistema JavaScript, garantizando experiencias de usuario excepcionales en cualquier dispositivo.</p>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="tech-desc-card" style="--cat-color:#FF2D20">
-              <div class="tech-desc-icon"><i class="fas fa-server"></i></div>
-              <h3 class="tech-desc-title">Backend</h3>
-              <p class="tech-desc-text">Arquitecturas robustas y escalables con APIs seguras y de alto rendimiento. Nuestro backend
-                maneja grandes volúmenes de datos con eficiencia y brinda una base sólida para el crecimiento continuo.</p>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="tech-desc-card" style="--cat-color:#027DFD">
-              <div class="tech-desc-icon"><i class="fas fa-mobile-alt"></i></div>
-              <h3 class="tech-desc-title">Móvil</h3>
-              <p class="tech-desc-text">Desarrollamos aplicaciones móviles multiplataforma para iOS y Android con experiencias
-                rápidas, fluidas y de alta calidad, reduciendo tiempos de desarrollo con un código base único.</p>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="tech-desc-card" style="--cat-color:#336791">
-              <div class="tech-desc-icon"><i class="fas fa-database"></i></div>
-              <h3 class="tech-desc-title">Bases de Datos</h3>
-              <p class="tech-desc-text">Arquitectura flexible que combina bases de datos relacionales y no relacionales, con
-                capacidades avanzadas de búsqueda full-text para resultados rápidos y precisos en tiempo real.</p>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="tech-desc-card" style="--cat-color:#FF9900">
-              <div class="tech-desc-icon"><i class="fas fa-cloud"></i></div>
-              <h3 class="tech-desc-title">Cloud &amp; DevOps</h3>
-              <p class="tech-desc-text">Infraestructura en la nube altamente confiable, escalable y segura con contenedorización
-                y despliegue automatizado para garantizar alta disponibilidad y rendimiento optimizado.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <p class="stack-note wow fadeInUp" data-wow-delay="0.5s">
+        <i class="fas fa-lightbulb" aria-hidden="true"></i>No partimos de la tecnología: primero entendemos tu necesidad
+        y después elegimos la herramienta que mejor la resuelve.
+      </p>
     </div>
   </section>
 
@@ -1843,7 +1770,7 @@
           </details>
           <details class="faq-item">
             <summary class="faq-question"><h3>¿Qué tecnologías utiliza Kernesys?</h3></summary>
-            <p class="faq-answer">Kernesys utiliza tecnologías modernas como Vue.js, React.js y Angular para frontend; Laravel, FastAPI, NestJS y Spring Boot para backend; Flutter para aplicaciones móviles; MySQL, PostgreSQL, MongoDB y Elasticsearch para bases de datos; y AWS para infraestructura en la nube.</p>
+            <p class="faq-answer">Elegimos la tecnología según lo que necesita cada proyecto. Para sistemas web usamos Vue.js, React y Angular, con Laravel, NestJS, FastAPI y Spring Boot; para aplicaciones de escritorio, C# / .NET, C++, Java y Python; para aplicaciones móviles en iPhone y Android, Flutter; y para analítica y machine learning, Python, PostgreSQL, MongoDB y Elasticsearch. Usamos AWS para la infraestructura en la nube.</p>
           </details>
           <details class="faq-item">
             <summary class="faq-question"><h3>¿Kernesys desarrolla aplicaciones móviles?</h3></summary>
