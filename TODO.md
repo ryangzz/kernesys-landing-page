@@ -52,14 +52,19 @@ formulario AJAX, páginas legales, 404, contadores visibles, un solo H1 y FAQ vi
 
 ## 3. Contenido nuevo
 
-- [ ] **Landing pages por servicio** (agregarlas al `sitemap.xml`):
-  - [ ] `/software-a-medida-monterrey/`
-  - [ ] `/wms-inventarios/`
-  - [ ] `/erp-crm-a-medida/`
-  - [ ] `/modernizacion-sistemas-legacy/`
-  - [ ] `/integraciones-api/`
-  - [ ] `/aplicaciones-moviles-empresariales/`
-  - [ ] `/industrias/manufactura/` y `/industrias/logistica/`
+- [x] **Landing pages por servicio** (agregarlas al `sitemap.xml`):
+  - [x] `/software-a-medida-monterrey/`
+  - [x] `/wms-inventarios/`
+  - [x] `/erp-crm-a-medida/`
+  - [x] `/modernizacion-sistemas-legacy/`
+  - [x] `/integraciones-api/`
+  - [x] `/aplicaciones-moviles-empresariales/`
+  - [x] `/industrias/manufactura/` y `/industrias/logistica/`
+  - [x] Agregadas al `sitemap.xml` y a `llms.txt`; enlazadas desde las tarjetas de servicios de la home ("Conoce más")
+  - [ ] Revisar los textos de cada landing (beneficios, preguntas frecuentes y tecnologías) antes de publicar
+  - [ ] Confirmar que el proceso de 5 pasos (diagnóstico → alcance → desarrollo por etapas → puesta en marcha → soporte) refleja cómo trabajan
+  - [ ] Agregar casos o capturas reales a las landings que hoy no tienen (WMS, integraciones, móviles, legacy, logística)
+  - [ ] Cuando exista `/gracias/` y GA4, medir los clics de WhatsApp y "Enviar un mensaje" de estas páginas
 - [ ] **`/casos-de-exito/`** con al menos 2 casos documentados (cliente o sector, problema, línea base, solución, implementación, resultado, prueba)
 - [ ] **`/nosotros/`**: equipo, trayectoria y metodología
 - [ ] **Página o sección de proceso de trabajo** (diagnóstico → alcance → sprints → despliegue → soporte)
