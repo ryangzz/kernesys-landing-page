@@ -66,7 +66,11 @@ formulario AJAX, páginas legales, 404, contadores visibles, un solo H1 y FAQ vi
   - [ ] Agregar casos o capturas reales a las landings que hoy no tienen (WMS, integraciones, móviles, legacy, logística)
   - [ ] Cuando exista `/gracias/` y GA4, medir los clics de WhatsApp y "Enviar un mensaje" de estas páginas
 - [ ] **`/casos-de-exito/`** con al menos 2 casos documentados (cliente o sector, problema, línea base, solución, implementación, resultado, prueba)
-- [ ] **`/nosotros/`**: equipo, trayectoria y metodología
+- [x] **`/nosotros/`**: equipo, trayectoria y metodología
+      (misión, principios, equipo por perfiles, trayectoria, clientes y casos, metodología; enlazada desde la home, las landings, `sitemap.xml` y `llms.txt`)
+  - [ ] Agregar nombres, puestos y fotos reales del equipo (hoy se describe por perfiles, sin nombres)
+  - [ ] Agregar hitos con fecha a la trayectoria (hoy solo 2019 y "Hoy")
+  - [ ] Confirmar los perfiles del equipo y los principios ("Lo que nos guía")
 - [ ] **Página o sección de proceso de trabajo** (diagnóstico → alcance → sprints → despliegue → soporte)
 - [ ] **Testimonios** con nombre, cargo, empresa y resultado
 - [ ] **Sustituir imágenes de banco** (hero, Nosotros, sello "Best Quality Guarantee") por capturas reales de sistemas, diagramas o fotos del equipo

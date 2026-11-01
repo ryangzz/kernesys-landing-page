@@ -142,6 +142,25 @@ h1, h2, h3 { color: var(--ink); line-height: 1.25; margin: 0; }
 .wa-float { position: fixed; right: 20px; bottom: 20px; width: 56px; height: 56px; border-radius: 50%; background: var(--wa); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.9rem; z-index: 60; box-shadow: 0 10px 24px rgba(37,211,102,.35); text-decoration: none; }
 .wa-float:hover { color: #fff; transform: translateY(-2px); }
 
+/* ===== Página Nosotros ===== */
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+.split h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 900; margin-bottom: 16px; }
+.split p { margin: 0 0 14px; font-size: 1.05rem; }
+.quote { background: var(--soft); border-left: 5px solid var(--brand-2); border-radius: 16px; padding: 28px 30px; font-size: 1.25rem; font-weight: 800; color: var(--brand); line-height: 1.5; margin: 0; }
+.timeline { list-style: none; margin: 0 auto; padding: 0; max-width: 760px; position: relative; }
+.timeline::before { content: ''; position: absolute; left: 19px; top: 8px; bottom: 8px; width: 2px; background: #cfe0ef; }
+.timeline li { position: relative; padding: 0 0 30px 60px; }
+.timeline li:last-child { padding-bottom: 0; }
+.timeline li::before { content: ''; position: absolute; left: 10px; top: 4px; width: 20px; height: 20px; border-radius: 50%; background: #fff; border: 4px solid var(--brand-2); }
+.timeline .when { font-size: .8rem; font-weight: 900; letter-spacing: .6px; text-transform: uppercase; color: var(--brand-2); margin: 0 0 4px; }
+.timeline h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 6px; }
+.timeline p { margin: 0; color: var(--muted); }
+.logos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 28px 44px; margin: 0 0 44px; padding: 0; list-style: none; }
+.logos img { height: 56px; width: auto; max-width: 160px; object-fit: contain; filter: grayscale(1); opacity: .75; transition: filter .3s ease, opacity .3s ease; }
+.logos img:hover { filter: none; opacity: 1; }
+@media (max-width: 991px) { .split { grid-template-columns: minmax(0, 1fr); gap: 28px; } }
+@media (max-width: 640px) { .logos img { height: 44px; } .quote { font-size: 1.1rem; padding: 22px; } }
+
 /* Responsive */
 @media (max-width: 991px) {
   .lp-hero-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }

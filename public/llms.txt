@@ -40,6 +40,7 @@ Las soluciones TMS pueden apoyar a las empresas en el control de información, e
 
 ## Páginas
 - [Inicio](https://www.kernesys.com/): servicios, casos, tecnologías, preguntas frecuentes y formulario de contacto
+- [Nosotros](https://www.kernesys.com/nosotros/): misión, equipo, trayectoria y metodología
 - [Software a la medida en Monterrey](https://www.kernesys.com/software-a-medida-monterrey/)
 - [Software WMS e inventarios](https://www.kernesys.com/wms-inventarios/)
 - [ERP y CRM a la medida](https://www.kernesys.com/erp-crm-a-medida/)
