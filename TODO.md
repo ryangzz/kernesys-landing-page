@@ -42,21 +42,40 @@ formulario AJAX, páginas legales, 404, contadores visibles, un solo H1 y FAQ vi
       usuarios o sucursales, fecha estimada y presupuesto (opcional); cambiar el botón "Enviar" por "Solicitar diagnóstico"
 - [ ] **Proyectos**: si son demos internas, etiquetarlas como "Demo" o "Concepto"; si son de clientes, agregar cliente o sector, problema, alcance, duración y resultado
 - [ ] **Cifras de contadores** (+60 proyectos, +50 clientes, +15 migraciones): confirmar que son reales y demostrables
-- [ ] **Tech Stack**: reducirlo al stack principal y explicar que la tecnología se elige según los requisitos
+- [x] **Tech Stack**: reducirlo al stack principal y explicar que la tecnología se elige según los requisitos
+      (rehecho como 4 pestañas para perfiles no técnicos: Web, Escritorio, Móvil, Analítica e IA)
+  - [x] Confirmar las tecnologías de Escritorio (C# / .NET, C++, Java, Python) y de Analítica e IA (Python, "Machine learning", PostgreSQL, MongoDB, Elasticsearch, AWS)
+  - [x] Confirmar que se pueden cumplir los beneficios descritos: apps de escritorio sin conexión, conexión con impresoras, básculas y lectores, y pronósticos de demanda
+  - [x] (Opcional) Sustituir las ilustraciones SVG por capturas reales de sistemas cuando existan
+  - [x] Actualizar la FAQ y el JSON-LD de "¿Qué tecnologías utiliza Kernesys?" si cambia la lista de tecnologías
 - [ ] **Franja de confianza** bajo el hero (ej. "Empresa mexicana desde 2019 | Entregas por sprint | Soporte postimplementación")
 
 ## 3. Contenido nuevo
 
-- [ ] **Landing pages por servicio** (agregarlas al `sitemap.xml`):
-  - [ ] `/software-a-medida-monterrey/`
-  - [ ] `/wms-inventarios/`
-  - [ ] `/erp-crm-a-medida/`
-  - [ ] `/modernizacion-sistemas-legacy/`
-  - [ ] `/integraciones-api/`
-  - [ ] `/aplicaciones-moviles-empresariales/`
-  - [ ] `/industrias/manufactura/` y `/industrias/logistica/`
+- [x] **Landing pages por servicio** (agregarlas al `sitemap.xml`):
+  - [x] `/software-a-medida-monterrey/`
+  - [x] `/wms-inventarios/`
+  - [x] `/erp-crm-a-medida/`
+  - [x] `/modernizacion-sistemas-legacy/`
+  - [x] `/integraciones-api/`
+  - [x] `/aplicaciones-moviles-empresariales/`
+  - [x] `/industrias/manufactura/` y `/industrias/logistica/`
+  - [x] Agregadas al `sitemap.xml` y a `llms.txt`; enlazadas desde las tarjetas de servicios de la home ("Conoce más")
+  - [ ] Revisar los textos de cada landing (beneficios, preguntas frecuentes y tecnologías) antes de publicar
+  - [ ] Confirmar que el proceso de 5 pasos (diagnóstico → alcance → desarrollo por etapas → puesta en marcha → soporte) refleja cómo trabajan
+  - [ ] Agregar casos o capturas reales a las landings que hoy no tienen (WMS, integraciones, móviles, legacy, logística)
+  - [ ] Cuando exista `/gracias/` y GA4, medir los clics de WhatsApp y "Enviar un mensaje" de estas páginas
 - [ ] **`/casos-de-exito/`** con al menos 2 casos documentados (cliente o sector, problema, línea base, solución, implementación, resultado, prueba)
-- [ ] **`/nosotros/`**: equipo, trayectoria y metodología
+- [x] **`/nosotros/`**: equipo, trayectoria y metodología
+      (misión, principios, equipo por perfiles, trayectoria, clientes y casos, metodología; enlazada desde la home, las landings, `sitemap.xml` y `llms.txt`)
+  - [ ] Agregar nombres, puestos y fotos reales del equipo (hoy se describe por perfiles, sin nombres)
+  - [ ] Agregar hitos con fecha a la trayectoria (hoy solo 2019 y "Hoy")
+  - [ ] Confirmar los perfiles del equipo y los principios ("Lo que nos guía")
+- [x] **Versión en inglés** de todas las páginas bajo `/en/`, con banderas MX/US en el navbar, `hreflang`, `sitemap.xml`, `llms.txt` y 404 en inglés
+      (regla en `CLAUDE.md`: todo cambio en una página se replica en su contraparte)
+  - [ ] Revisar los textos en inglés, de preferencia con un hablante nativo
+  - [ ] Confirmar que quien atiende el formulario y WhatsApp puede responder en inglés (los mensajes del sitio en inglés llegan en inglés; el formulario se identifica como "Sitio web Kernesys (EN)")
+  - [ ] Volver a enviar `sitemap.xml` en Search Console para que indexe las páginas en inglés
 - [ ] **Página o sección de proceso de trabajo** (diagnóstico → alcance → sprints → despliegue → soporte)
 - [ ] **Testimonios** con nombre, cargo, empresa y resultado
 - [ ] **Sustituir imágenes de banco** (hero, Nosotros, sello "Best Quality Guarantee") por capturas reales de sistemas, diagramas o fotos del equipo
@@ -70,7 +89,7 @@ formulario AJAX, páginas legales, 404, contadores visibles, un solo H1 y FAQ vi
 
 ## 4. Legal
 
-- [ ] **Revisar el Aviso de Privacidad**:
+- [ ] **Revisar el Aviso de Privacidad** (y su versión en inglés, `/en/privacy/`):
   - [ ] Dice que se usa Google Analytics, pero hoy no está instalado (corregir o instalarlo)
   - [ ] Los datos del formulario los procesa Web3Forms (tercero); mencionarlo
   - [ ] Agregar la identidad y el domicilio del responsable, como exige la LFPDPPP

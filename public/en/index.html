@@ -1,0 +1,1998 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Marca el documento como "con JS" para ocultar las animaciones de entrada
+       solo cuando main.js puede mostrarlas. Si main.js no carga, se revierte. -->
+  <script>
+    document.documentElement.classList.add('js');
+    setTimeout(function () { if (!window.__kernesysReady) document.documentElement.classList.remove('js'); }, 3000);
+  </script>
+
+  <!-- ===== Preload: imagen del hero (LCP) y fuente principal ===== -->
+  <link rel="preload" as="image" type="image/webp" href="/img/slide1.webp" media="(min-width: 769px)" />
+  <link rel="preload" as="image" type="image/webp" href="/img/slide1-mobile.webp" media="(max-width: 768px)" />
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/XRXV3I6Li01BKofINeaB.woff2" crossorigin />
+
+  <!-- ===== SEO básico ===== -->
+  <title>Custom Software, WMS, TMS &amp; MES Development in Mexico | KERNESYS</title>
+  <meta name="description" content="We build custom software, WMS, TMS and MES in Monterrey, Mexico, to digitize warehouses, transportation and production with operational control and traceability." />
+  <meta name="author" content="Kernesys" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content="#074d7e" />
+  <meta name="format-detection" content="telephone=yes" />
+  <meta name="application-name" content="Kernesys" />
+  <meta name="apple-mobile-web-app-title" content="Kernesys" />
+  <link rel="canonical" href="https://www.kernesys.com/en/" />
+  <link rel="alternate" hreflang="es" href="https://www.kernesys.com/" />
+  <link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/" />
+
+  <!-- ===== SEO local ===== -->
+  <meta name="geo.region" content="MX-NLE" />
+  <meta name="geo.placename" content="Monterrey, Nuevo León, Mexico" />
+  <meta name="geo.position" content="25.6866;-100.3161" />
+  <meta name="ICBM" content="25.6866, -100.3161" />
+
+  <!-- ===== Open Graph (Facebook, LinkedIn, WhatsApp) ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Kernesys" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="es_MX" />
+  <meta property="og:url" content="https://www.kernesys.com/en/" />
+  <meta property="og:title" content="Kernesys | Custom Software, WMS, TMS &amp; MES Development in Mexico" />
+  <meta property="og:description" content="Software consultancy in Monterrey, Mexico. We build WMS, TMS and MES solutions for warehouses, transportation, production and operational traceability." />
+  <meta property="og:image" content="https://www.kernesys.com/img/og-kernesys.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Kernesys - Custom software development in Monterrey, Mexico" />
+  <meta property="fb:app_id" content="1303620424923567" />
+
+  <!-- ===== Twitter / X ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kernesys | Custom Software, WMS, TMS &amp; MES Development in Mexico" />
+  <meta name="twitter:description" content="Software consultancy in Monterrey, Mexico. We build WMS, TMS and MES solutions for warehouses, transportation, production and operational traceability." />
+  <meta name="twitter:image" content="https://www.kernesys.com/img/og-kernesys.jpg" />
+  <meta name="twitter:image:alt" content="Kernesys - Custom software development in Monterrey, Mexico" />
+
+  <!-- ===== Datos estructurados (JSON-LD): organización, sitio, página y FAQ ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.kernesys.com/#organization",
+        "name": "Kernesys",
+        "alternateName": [
+          "Kernesys Software",
+          "Kernesys Consultora"
+        ],
+        "url": "https://www.kernesys.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.kernesys.com/img/logoblack.png",
+          "width": 1246,
+          "height": 358
+        },
+        "image": "https://www.kernesys.com/img/og-kernesys.jpg",
+        "description": "Mexican custom software development consultancy based in Monterrey. Builds WMS, TMS and MES solutions, ERP and CRM systems, integrations, process automation, mobile apps and cloud services since 2019.",
+        "foundingDate": "2019",
+        "telephone": "+52-81-3247-1163",
+        "email": "contacto@kernesys.com",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Monterrey",
+          "addressRegion": "Nuevo León",
+          "postalCode": "64000",
+          "addressCountry": "MX"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 25.6866,
+          "longitude": -100.3161
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Monterrey"
+          },
+          {
+            "@type": "Country",
+            "name": "Mexico"
+          },
+          {
+            "@type": "Place",
+            "name": "Latin America"
+          },
+          {
+            "@type": "Country",
+            "name": "United States"
+          }
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+52-81-3247-1163",
+          "email": "contacto@kernesys.com",
+          "contactType": "sales",
+          "availableLanguage": [
+            "es",
+            "en"
+          ]
+        },
+        "sameAs": [
+          "https://www.facebook.com/Kernesys/",
+          "https://www.instagram.com/kernesys/",
+          "https://www.linkedin.com/company/kernesys/"
+        ],
+        "knowsAbout": [
+          "Custom software development",
+          "WMS",
+          "Warehouse Management System",
+          "TMS",
+          "Transportation Management System",
+          "MES",
+          "Manufacturing Execution System",
+          "Warehouse management",
+          "Inventory control",
+          "Operational traceability",
+          "ERP",
+          "CRM",
+          "Systems integration",
+          "Process automation",
+          "System migration",
+          "Mobile applications",
+          "Cloud Computing",
+          "AWS"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Software development services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Custom software",
+                "description": "Custom systems built from scratch around each company's processes: from internal applications to multi-module platforms."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "ERP, CRM and E-commerce systems",
+                "description": "Custom business management, customer relationship and e-commerce systems that centralize business information."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Process automation",
+                "description": "Digitization of workflows to eliminate repetitive manual tasks, reduce operating costs and minimize errors."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Mobile applications",
+                "description": "Cross-platform Flutter apps for iOS and Android, for internal operations or for customers."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Systems integration and cloud",
+                "description": "Connecting existing systems with each other and with cloud services (AWS), unifying data and processes."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Migration and modernization",
+                "description": "Upgrading legacy systems to modern technologies: database migration, interface renewal and architecture optimization."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "WMS — Warehouse Management System",
+                "description": "Custom WMS solutions for warehouse management, inventory control, locations, racks, movements and stock traceability."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "TMS — Transportation Management System",
+                "description": "Custom TMS solutions to control trips, vehicles, drivers, proof of delivery, documentation and logistics traceability."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "MES — Manufacturing Execution System",
+                "description": "Custom MES solutions to digitize production processes, work orders, progress, incidents and traceability on the plant floor."
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.kernesys.com/#website",
+        "url": "https://www.kernesys.com/",
+        "name": "Kernesys",
+        "inLanguage": [
+          "es-MX",
+          "en"
+        ],
+        "publisher": {
+          "@id": "https://www.kernesys.com/#organization"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.kernesys.com/en/#webpage",
+        "url": "https://www.kernesys.com/en/",
+        "name": "Custom Software, WMS, TMS & MES Development in Mexico | KERNESYS",
+        "description": "We build custom software, WMS, TMS and MES in Monterrey, Mexico, to digitize warehouses, transportation and production with operational control and traceability.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@id": "https://www.kernesys.com/#website"
+        },
+        "about": {
+          "@id": "https://www.kernesys.com/#organization"
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://www.kernesys.com/img/og-kernesys.jpg"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.kernesys.com/en/#faq",
+        "isPartOf": {
+          "@id": "https://www.kernesys.com/en/#webpage"
+        },
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What software development services does Kernesys offer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kernesys offers custom software development, WMS solutions for warehouses, TMS for transportation and MES for production, ERP and CRM systems, process automation, systems integration and cloud services (AWS), mobile apps built with Flutter, and system migration and modernization."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where is Kernesys located?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kernesys is headquartered in Monterrey, Nuevo León, Mexico, and serves clients from all over the world."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What technologies does Kernesys use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We choose the technology based on what each project needs. For web systems we use Vue.js, React and Angular, with Laravel, NestJS, FastAPI and Spring Boot; for desktop applications, C# / .NET, C++, Java and Python; for iPhone and Android mobile apps, Flutter; and for analytics and machine learning, Python, PostgreSQL, MongoDB and Elasticsearch. We use AWS for cloud infrastructure."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Kernesys develop mobile apps?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, Kernesys develops mobile apps with Flutter, which allows us to build fast, smooth experiences on both iOS and Android from a single, efficient codebase."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long has Kernesys been in business?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kernesys is a 100% Mexican company operating since 2019, dedicated to driving the digital transformation of businesses through innovative, tailored technology solutions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a software project with Kernesys take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends on the complexity. A website can be ready in 2–4 weeks, a mobile app in 6–12 weeks and a complete ERP or CRM system in 3–6 months. We always provide a detailed timeline before starting so you have full visibility into the process."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Kernesys offer support and maintenance after launch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, all our projects include a post-launch support period. We also offer extended maintenance plans with updates, fixes and technical assistance to keep your system running optimally over the long term."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Kernesys work with companies outside Monterrey and Mexico?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we work with clients throughout Mexico, Latin America and the United States. Thanks to our remote work methodologies and collaboration tools, distance is not an obstacle to delivering high-quality software projects."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== Favicons ===== -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+
+  <!-- ===== CSS crítico ===== -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/fonts-nunito.css" />
+  <link rel="stylesheet" href="/css/styles-LTR.css" />
+  <!-- ===== CSS no crítico (no bloquea el renderizado) ===== -->
+  <link rel="stylesheet" href="/css/all.min.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="/css/animate.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="/css/swiper.min.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="/css/splitting.css" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="/css/all.min.css" />
+    <link rel="stylesheet" href="/css/animate.css" />
+    <link rel="stylesheet" href="/css/swiper.min.css" />
+    <link rel="stylesheet" href="/css/splitting.css" />
+  </noscript>
+
+  <style>
+    /* ===== Stack: soluciones por plataforma ===== */
+    .tech-stack-section {
+      background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+      padding: 100px 0;
+      overflow: hidden;
+    }
+    .stack-tabs {
+      display: flex; justify-content: center; flex-wrap: wrap;
+      gap: 10px; margin-bottom: 44px;
+    }
+    .stack-tab {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 11px 24px; border: 2px solid #d5dce6; border-radius: 50px;
+      background: #fff; color: #4a5568; font-size: .95rem; font-weight: 700;
+      cursor: pointer; font-family: 'Nunito', sans-serif;
+      transition: all .3s cubic-bezier(.4,0,.2,1);
+    }
+    .stack-tab:hover { border-color: #074d7e; color: #074d7e; transform: translateY(-2px); box-shadow: 0 4px 15px rgba(7,77,126,.15); }
+    .stack-tab:focus-visible { outline: 3px solid rgba(10,107,171,.45); outline-offset: 2px; }
+    .stack-tab[aria-selected="true"] {
+      background: linear-gradient(135deg,#074d7e 0%,#0a6bab 100%);
+      border-color: #074d7e; color: #fff; box-shadow: 0 6px 20px rgba(7,77,126,.3);
+    }
+    .stack-stage {
+      display: grid; grid-template-columns: minmax(0, 1fr);
+      background: #fff; border: 1px solid #e3e9f0;
+      border-radius: 24px; box-shadow: 0 24px 60px rgba(15,40,70,.08);
+      overflow: hidden;
+    }
+    .stack-panel {
+      grid-area: 1 / 1;
+      display: grid; grid-template-columns: 1fr 1fr; align-items: center;
+      gap: 48px; padding: 48px;
+      visibility: hidden; opacity: 0;
+      transition: opacity .45s ease, visibility 0s linear .45s;
+    }
+    .stack-panel.is-active { visibility: visible; opacity: 1; transition: opacity .45s ease .1s, visibility 0s; }
+    .stack-visual {
+      position: relative; border-radius: 20px; padding: 32px;
+      background: var(--panel-bg);
+      aspect-ratio: 5 / 4; display: flex; align-items: center; justify-content: center;
+      transform: translateX(-30px); transition: transform .6s cubic-bezier(.2,.8,.2,1);
+    }
+    .stack-visual svg { width: 100%; height: 100%; filter: drop-shadow(0 18px 30px rgba(10,40,80,.18)); }
+    .stack-content { transform: translateX(30px); transition: transform .6s cubic-bezier(.2,.8,.2,1); }
+    .stack-panel.is-active .stack-visual,
+    .stack-panel.is-active .stack-content { transform: none; }
+    .stack-kicker {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: .78rem; font-weight: 800; letter-spacing: .8px; text-transform: uppercase;
+      color: var(--accent); background: var(--accent-soft);
+      padding: 6px 14px; border-radius: 30px; margin-bottom: 16px;
+    }
+    .stack-title { font-size: 1.75rem; font-weight: 800; color: #1a202c; line-height: 1.25; margin-bottom: 14px; }
+    .stack-lead { font-size: 1rem; line-height: 1.75; color: #4a5568; margin-bottom: 22px; }
+    .stack-benefits { list-style: none; padding: 0; margin: 0 0 26px; display: grid; gap: 12px; }
+    .stack-benefits li { display: flex; gap: 12px; font-size: .95rem; line-height: 1.55; color: #2d3748; }
+    .stack-benefits li i {
+      flex: 0 0 26px; height: 26px; border-radius: 8px; margin-top: 1px;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: .75rem; color: var(--accent); background: var(--accent-soft);
+    }
+    .stack-tools-label { font-size: .78rem; font-weight: 700; color: #718096; text-transform: uppercase; letter-spacing: .6px; margin-bottom: 10px; }
+    .stack-tools { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+    .stack-tools li {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: .82rem; font-weight: 700; color: #334155;
+      background: #f1f5f9; border: 1px solid #e2e8f0; padding: 5px 12px; border-radius: 20px;
+    }
+    .stack-tools li i { color: var(--accent); }
+    .stack-note { text-align: center; color: #64748b; font-size: .95rem; margin: 32px auto 0; max-width: 680px; }
+    .stack-note i { color: #0a6bab; margin-right: 6px; }
+    @media (max-width: 991px) {
+      .stack-panel { grid-template-columns: 1fr; gap: 28px; padding: 28px; }
+      .stack-visual { aspect-ratio: 16 / 10; max-width: 520px; width: 100%; margin: 0 auto; padding: 20px; }
+      .stack-title { font-size: 1.45rem; }
+    }
+    @media (max-width: 576px) {
+      .tech-stack-section { padding: 70px 0; }
+      .stack-tab { padding: 9px 16px; font-size: .88rem; }
+      .stack-panel { padding: 20px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .stack-panel, .stack-visual, .stack-content { transition: none !important; transform: none !important; }
+    }
+    /* ===== Enlace "Conoce más" en tarjetas de servicio ===== */
+    .service-more { display:inline-flex; align-items:center; gap:6px; margin-top:14px; font-weight:800; color:#0a6bab; text-decoration:none; }
+    .service-more:hover { color:#074d7e; text-decoration:underline; }
+    .service-more i { font-size:.8rem; transition:transform .2s ease; }
+    .service-more:hover i { transform:translateX(3px); }
+    /* ===== WhatsApp Float ===== */
+    .whatsapp-float {
+      position: fixed; right: 22px; bottom: 95px;
+      width: 56px; height: 56px; border-radius: 50%;
+      background: #25d366; color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; z-index: 9999;
+      box-shadow: 0 10px 24px rgba(37,211,102,.35);
+      transition: transform .2s ease, box-shadow .2s ease;
+      text-decoration: none !important; border: 0; outline: 0; line-height: 1;
+    }
+    .whatsapp-float:hover {
+      color: #fff;
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 12px 28px rgba(37,211,102,.45);
+      text-decoration: none !important;
+    }
+    .whatsapp-float:focus,.whatsapp-float:active,.whatsapp-float:visited { color:#fff; text-decoration:none!important; }
+    .whatsapp-float i { display:block; line-height:1; }
+    @media(max-width:768px){
+      .whatsapp-float { right:16px; bottom:88px; width:52px; height:52px; font-size:1.8rem; }
+    }
+
+    /* ===== Proyectos ===== */
+    .projects-section { background: #fff; padding: 100px 0; }
+    .projects-filter { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-bottom:48px; }
+    .pf-btn {
+      display:inline-flex; align-items:center; gap:6px;
+      padding:9px 22px; border:2px solid #d5dce6; border-radius:50px;
+      background:#fff; color:#4a5568; font-size:.9rem; font-weight:600;
+      cursor:pointer; transition:all .3s ease; font-family:'Nunito',sans-serif;
+    }
+    .pf-btn:hover { border-color:#074d7e; color:#074d7e; transform:translateY(-2px); box-shadow:0 4px 14px rgba(7,77,126,.14); }
+    .pf-btn.active { background:linear-gradient(135deg,#074d7e 0%,#0a6bab 100%); border-color:#074d7e; color:#fff; box-shadow:0 6px 18px rgba(7,77,126,.28); }
+    .project-card {
+      position:relative; border-radius:18px; background:#fff;
+      border:1px solid #e8edf2; overflow:hidden;
+      transition:all .4s cubic-bezier(.4,0,.2,1);
+      display:flex; flex-direction:column;
+    }
+    .project-card:hover { transform:translateY(-8px); box-shadow:0 24px 48px rgba(0,0,0,.1); border-color:transparent; }
+    .project-card-img {
+      height:180px; display:flex; align-items:center; justify-content:center;
+      font-size:3rem; color:#fff; position:relative; overflow:hidden;
+    }
+    .project-card-img::after {
+      content:''; position:absolute; inset:0;
+      background:rgba(0,0,0,0); transition:background .3s ease;
+    }
+    .project-card:hover .project-card-img::after { background:rgba(0,0,0,.08); }
+    .project-card-body { padding:22px 22px 26px; flex:1; display:flex; flex-direction:column; }
+    .project-badge {
+      display:inline-block; font-size:.7rem; font-weight:700; letter-spacing:.6px;
+      text-transform:uppercase; padding:4px 12px; border-radius:20px;
+      background:#eef4fb; color:#074d7e; margin-bottom:10px;
+    }
+    .project-title { font-size:1.05rem; font-weight:800; color:#1a202c; margin-bottom:8px; }
+    .project-desc { font-size:.88rem; line-height:1.65; color:#64748b; margin-bottom:0; flex:1; }
+    .project-item { margin-bottom:28px; }
+    @media(max-width:576px){
+      .projects-section { padding:70px 0; }
+      .project-card-img { height:150px; font-size:2.4rem; }
+    }
+
+    /* ===== Animaciones de entrada (main.js las revela al hacer scroll) ===== */
+    .js .wow { visibility: hidden; }
+    @keyframes kxFilterIn { from { opacity:0; transform:scale(.96); } to { opacity:1; transform:none; } }
+    .filter-in { animation: kxFilterIn .35s ease both; }
+
+    /* Mantener el aspecto previo tras ajustar la jerarquía de encabezados */
+    .footer-col-title,
+    .about .about-stats .stat-box .stat-desc { line-height: 1.2; }
+
+    /* ===== Preguntas frecuentes ===== */
+    .faq-section { background:#fff; padding:100px 0; }
+    .faq-item {
+      border:1px solid #e8edf2; border-radius:14px; background:#fff;
+      margin-bottom:14px; transition:box-shadow .3s ease, border-color .3s ease;
+    }
+    .faq-item[open] { border-color:#c9d8e8; box-shadow:0 10px 28px rgba(7,77,126,.08); }
+    .faq-question {
+      display:flex; align-items:center; justify-content:space-between; gap:16px;
+      padding:18px 22px; cursor:pointer; list-style:none;
+    }
+    .faq-question::-webkit-details-marker { display:none; }
+    .faq-question::after {
+      content:'+'; flex:0 0 auto; font-size:1.5rem; font-weight:700; line-height:1;
+      color:#074d7e; transition:transform .25s ease;
+    }
+    .faq-item[open] .faq-question::after { transform:rotate(45deg); }
+    .faq-question h3 { margin:0; font-size:1.05rem; font-weight:800; color:#1a202c; line-height:1.4; }
+    .faq-answer { margin:0; padding:0 22px 20px; font-size:.95rem; line-height:1.7; color:#64748b; }
+    @media(max-width:576px){ .faq-section { padding:70px 0; } }
+
+    /* ===== Formulario de contacto ===== */
+    .main-form-wraper .done-msg.is-error { color:#c0392b; }
+    .main-form-wraper .ma-btn-primary:disabled { opacity:.7; cursor:wait; }
+    .form-privacy-note { margin:0; font-size:.85rem; color:#64748b; }
+    .form-privacy-note a { color:#074d7e; text-decoration:underline; }
+
+    /* ===== Accesibilidad ===== */
+    .menu-toggler-btn:focus-visible,
+    .back-to-top:focus-visible,
+    .swiper-button-prev:focus-visible,
+    .swiper-button-next:focus-visible,
+    .faq-question:focus-visible { outline:3px solid #0a6bab; outline-offset:3px; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior:auto; }
+      *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+    }
+
+    /* ===== Selector de idioma (banderas) ===== */
+    .page-header .lang-switch { display:flex; align-items:center; gap:6px; order:3; }
+    .page-header .lang-link { display:inline-flex; padding:3px; border:2px solid transparent; border-radius:6px; opacity:.6; line-height:0; transition:opacity .2s ease, border-color .2s ease; }
+    .page-header .lang-link img { display:block; width:24px; height:16px; border-radius:3px; }
+    .page-header .lang-link:hover, .page-header .lang-link:focus-visible { opacity:1; }
+    .page-header .lang-link.is-active { opacity:1; border-color:rgba(255,255,255,.85); }
+    .page-header .lang-link:focus-visible { outline:3px solid #0a6bab; outline-offset:2px; }
+    @media (max-width: 1199px) {
+      .page-header .lang-switch { order:1; margin-left:auto; margin-right:1.25rem; }
+      .page-header .menu-toggler-btn { order:2; }
+    }
+  </style>
+</head>
+
+<body class="landing-page-demo overlay-is-linear-gradient rounded-btns">
+
+  <!-- ============================================================ -->
+  <!-- Header                                                       -->
+  <!-- ============================================================ -->
+  <header class="page-header menu-on-end" id="page-header">
+    <div class="container">
+      <nav class="main-navbar" id="main-nav" aria-label="Main navigation">
+        <a class="navbar-brand" href="/en/" aria-label="Kernesys - Home">
+          <picture>
+            <source type="image/webp" srcset="/img/logokernesys.webp" />
+            <img class="brand-logo light-logo img-fluid" src="/img/logokernesys.png"
+              alt="Kernesys - Software Development Consultancy in Monterrey, Mexico"
+              width="400" height="104" />
+          </picture>
+        </a>
+        <div class="menu-toggler-btn">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="navbar-menu-wraper" id="navbar-menu-wraper">
+          <ul class="navbar-nav mobile-menu">
+            <li class="nav-item">
+              <a class="nav-link" href="#page-hero"><i class="fas fa-home icon" aria-hidden="true"></i>Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services"><i class="fas fa-address-card icon" aria-hidden="true"></i>Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about"><i class="fas fa-cogs icon" aria-hidden="true"></i>About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#our-clients"><i class="fas fa-handshake icon" aria-hidden="true"></i>Clients</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tech-stack"><i class="fas fa-layer-group icon" aria-hidden="true"></i>Stack</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects"><i class="fas fa-briefcase icon" aria-hidden="true"></i>Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact-us"><i class="fas fa-mobile-alt icon" aria-hidden="true"></i>Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <a class="lang-link" href="/" hreflang="es" lang="es" title="Ver en español"><img src="/img/flags/mx.svg" alt="Español" width="24" height="16" /></a>
+          <a class="lang-link is-active" href="/en/" hreflang="en" lang="en" title="English" aria-current="page"><img src="/img/flags/us.svg" alt="English" width="24" height="16" /></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- Hero Slider                                                  -->
+  <!-- ============================================================ -->
+  <section class="page-hero hero-swiper-slider d-flex align-items-center" id="page-hero">
+    <div class="social-icons">
+      <div class="sc-wraper dir-row sc-flat">
+        <ul class="sc-list">
+          <li class="sc-item" title="Facebook">
+            <a class="sc-link" href="https://www.facebook.com/Kernesys/" target="_blank" rel="noopener" aria-label="Kernesys on Facebook">
+              <i class="fab fa-facebook-f sc-icon" aria-hidden="true"></i></a>
+          </li>
+          <li class="sc-item" title="LinkedIn">
+            <a class="sc-link" href="https://www.linkedin.com/company/kernesys/" target="_blank" rel="noopener" aria-label="Kernesys on LinkedIn">
+              <i class="fab fa-linkedin sc-icon" aria-hidden="true"></i></a>
+          </li>
+          <li class="sc-item" title="Instagram">
+            <a class="sc-link" href="https://www.instagram.com/kernesys/" target="_blank" rel="noopener" aria-label="Kernesys on Instagram">
+              <i class="fab fa-instagram sc-icon" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="slider swiper-container">
+      <div class="text-center swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <div class="slider-bg">
+              <div class="overlay-color"></div>
+              <picture>
+                <source type="image/webp" media="(max-width: 768px)" srcset="/img/slide1-mobile.webp" />
+                <source type="image/webp" srcset="/img/slide1.webp" />
+                <img class="slider-bg-img" src="/img/slide1.jpg"
+                  alt="Kernesys - Custom software to grow your business in Monterrey"
+                  width="1920" height="1281" loading="eager" fetchpriority="high" decoding="async" />
+              </picture>
+            </div>
+            <div class="container">
+              <div class="hero-text-area">
+                <div class="row justify-content-center">
+                  <div class="mx-auto col-12 col-lg-8">
+                    <h1 class="slide-title" data-splitting="words">
+                      Custom software to <span class="hollow-text">power</span> your business.
+                    </h1>
+                  </div>
+                  <div class="mx-auto col-9 col-md-10 col-lg-8">
+                    <p class="slide-subtitle narrow-centerd-text" data-splitting="words">
+                      We build tailored solutions that fit your needs perfectly,
+                      optimizing your processes and boosting your operational efficiency.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <div class="slider-bg">
+              <div class="overlay-color"></div>
+              <picture>
+                <source type="image/webp" media="(max-width: 768px)" srcset="/img/slide2-mobile.webp" />
+                <source type="image/webp" srcset="/img/slide2.webp" />
+                <img class="slider-bg-img" src="/img/slide2.jpg"
+                  alt="Kernesys - Efficient system migrations without interruptions"
+                  width="1920" height="1281" loading="lazy" decoding="async" />
+              </picture>
+            </div>
+            <div class="container">
+              <div class="hero-text-area">
+                <div class="row justify-content-center">
+                  <div class="mx-auto col-12 col-lg-8">
+                    <h2 class="slide-title" data-splitting="words">
+                      <span class="hollow-text">Efficient</span> migrations without interruptions
+                    </h2>
+                  </div>
+                  <div class="mx-auto col-9 col-md-10 col-lg-8">
+                    <p class="slide-subtitle narrow-centerd-text" data-splitting="words">
+                      Upgrade your systems to new technologies. We take care of a successful
+                      technology migration for your business.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <div class="slider-bg">
+              <div class="overlay-color"></div>
+              <picture>
+                <source type="image/webp" media="(max-width: 768px)" srcset="/img/slide3-mobile.webp" />
+                <source type="image/webp" srcset="/img/slide3.webp" />
+                <img class="slider-bg-img" src="/img/slide3.jpg"
+                  alt="Kernesys - Professional, high-quality management of software projects"
+                  width="1920" height="1280" loading="lazy" decoding="async" />
+              </picture>
+            </div>
+            <div class="container">
+              <div class="hero-text-area">
+                <div class="row justify-content-center">
+                  <div class="mx-auto col-12 col-lg-8">
+                    <h2 class="slide-title wow fadeInUp" data-splitting="words">
+                      <span class="hollow-text">Professional</span>, high-quality project management
+                    </h2>
+                  </div>
+                  <div class="mx-auto col-9 col-md-10 col-lg-8">
+                    <p class="slide-subtitle narrow-centerd-text" data-splitting="words">
+                      End-to-end management of technology projects with agile methodologies,
+                      ensuring on-time delivery and high-impact results.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev wow fadeInUp" data-wow-delay=".4s">
+        <div class="left-arrow"><i class="fas fa-arrow-left icon" aria-hidden="true"></i></div>
+      </div>
+      <div class="swiper-button-next wow fadeInUp" data-wow-delay=".4s">
+        <div class="right-arrow"><i class="fas fa-arrow-right icon" aria-hidden="true"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Services                                                     -->
+  <!-- ============================================================ -->
+  <section class="text-center services mega-section section-bg-shade" id="services">
+    <div class="container">
+      <div class="section-heading center-heading">
+        <h2 class="section-title2 wow" data-splitting="chars">
+          Innovation and excellence in every solution
+        </h2>
+        <p class="section-subtitle wow fadeInUp" data-wow-delay=".5s">
+          We design, build and implement custom technology solutions that transform how your
+          company operates, from compact systems to large-scale enterprise platforms.
+        </p>
+        <div class="line line-solid-main-color wow fadeIn" data-wow-delay="1s"></div>
+      </div>
+      <div class="row services-row">
+        <div class="mx-auto col-12 col-md-6 col-lg-4">
+          <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+            <div class="service-icon">
+              <picture><source type="image/webp" srcset="/img/2-services.webp" />
+                <img class="img-icon" src="/img/2-services.png"
+                  alt="Custom software development - Kernesys Monterrey"
+                  width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Custom software</h3>
+              <p class="service-text">We build custom systems from scratch, 100% adapted to your company's unique
+                processes. From internal applications to complex multi-module platforms,
+                we build exactly the solution you need.</p>
+              <a class="service-more" href="/en/custom-software-monterrey/">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="mx-auto col-12 col-md-6 col-lg-4">
+          <div class="service-box wow fadeInUp" data-wow-delay="0.4s">
+            <div class="service-icon">
+              <picture><source type="image/webp" srcset="/img/3-services.webp" />
+                <img class="img-icon" src="/img/3-services.png"
+                  alt="Custom ERP, CRM and E-commerce systems - Kernesys Mexico"
+                  width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">ERP, CRM and E-commerce systems</h3>
+              <p class="service-text">We develop and implement business management, customer relationship and
+                e-commerce systems tailored to you, centralizing all your business
+                information in a single platform.</p>
+              <a class="service-more" href="/en/custom-erp-crm/">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="mx-auto col-12 col-md-6 col-lg-4">
+          <div class="service-box wow fadeInUp" data-wow-delay="0.6s">
+            <div class="service-icon">
+              <picture><source type="image/webp" srcset="/img/1-services.webp" />
+                <img class="img-icon" src="/img/1-services.png"
+                  alt="Business process automation - Kernesys Monterrey"
+                  width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Process automation</h3>
+              <p class="service-text">We eliminate repetitive manual tasks by digitizing your company's workflows.
+                We reduce operating costs, minimize human error and free your team to
+                focus on what's strategic.</p>
+            </div>
+          </div>
+        </div>
+        <div class="mx-auto col-12 col-md-6 col-lg-4">
+          <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+            <div class="service-icon">
+              <picture><source type="image/webp" srcset="/img/5-services.webp" />
+                <img class="img-icon" src="/img/5-services.png"
+                  alt="Mobile app development - Kernesys"
+                  width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Mobile apps</h3>
+              <p class="service-text">We build native and cross-platform apps with Flutter for iOS and Android.
+                From internal apps for your operations to digital products for your customers,
+                with fast, intuitive experiences.</p>
+              <a class="service-more" href="/en/enterprise-mobile-apps/">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="mx-auto col-12 col-md-6 col-lg-4">
+          <div class="service-box wow fadeInUp" data-wow-delay="0.4s">
+            <div class="service-icon">
+              <picture><source type="image/webp" srcset="/img/4-services.webp" />
+                <img class="img-icon" src="/img/4-services.png"
+                  alt="Systems integration and cloud services - Kernesys"
+                  width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Systems integration and cloud</h3>
+              <p class="service-text">We connect your existing systems with each other and with cloud services (AWS),
+                unifying data and processes on a secure, scalable, high-availability infrastructure
+                for your company.</p>
+              <a class="service-more" href="/en/api-integrations/">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="mx-auto col-12 col-md-6 col-lg-4">
+          <div class="service-box wow fadeInUp" data-wow-delay="0.6s">
+            <div class="service-icon">
+              <picture><source type="image/webp" srcset="/img/6-services.webp" />
+                <img class="img-icon" src="/img/6-services.png"
+                  alt="System migration and modernization - Kernesys"
+                  width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Migration and modernization</h3>
+              <p class="service-text">We upgrade legacy systems to modern technologies without interrupting your operations.
+                We migrate databases, renew interfaces and optimize architectures so your company
+                doesn't fall behind.</p>
+              <a class="service-more" href="/en/legacy-system-modernization/">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="mx-auto col-12 col-md-6 col-lg-4">
+          <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+            <div class="service-icon">
+              <span class="service-icon-lineal service-icon-warehouse" aria-hidden="true">
+                <i class="fas fa-boxes"></i>
+              </span>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">WMS — Smart Warehouse Management</h3>
+              <p class="service-text">We build custom WMS solutions to control warehouses, inventory, locations, racks, receiving, shipping, movements and stock traceability.<br><br>Each solution is adapted to the company's operations, processes and specific needs.</p>
+              <a class="service-more" href="/en/wms-inventory/">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mx-auto col-12 col-md-6 col-lg-4">
+          <div class="service-box wow fadeInUp" data-wow-delay="0.4s">
+            <div class="service-icon">
+              <span class="service-icon-lineal service-icon-transport" aria-hidden="true">
+                <i class="fas fa-truck-moving"></i>
+              </span>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">TMS — Transportation Management and Traceability</h3>
+              <p class="service-text">We build custom TMS solutions to control trips, vehicles, drivers, proof of delivery, documentation and traceability of logistics operations.<br><br>They can also support the document management and traceability required in CTPAT-related processes.</p>
+              <a class="service-more" href="/en/industries/logistics/">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mx-auto col-12 col-md-6 col-lg-4">
+          <div class="service-box wow fadeInUp" data-wow-delay="0.6s">
+            <div class="service-icon">
+              <span class="service-icon-lineal service-icon-mes" aria-hidden="true">
+                <i class="fas fa-industry"></i>
+              </span>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">MES — Production Management and Traceability</h3>
+              <p class="service-text">We build custom MES solutions to digitize and control production processes, work orders, progress, incidents and operational traceability on the plant floor.<br><br>Each implementation is adapted to the company's production flow, controls and specific needs.</p>
+              <a class="service-more" href="/en/industries/manufacturing/">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="logistics-solutions mega-section" id="wms-tms">
+    <div class="container">
+      <div class="section-heading center-heading wow fadeInUp" data-wow-delay="0.2s">
+        <span class="tag-line">WMS, TMS and MES software for real operations</span>
+        <h2 class="section-title2">WMS, TMS and MES built for each operation</h2>
+        <p class="section-intro">Every company stores, transports and produces differently. We design software solutions adapted to the real processes of each operation.</p>
+      </div>
+
+      <div class="logistics-grid">
+        <article class="logistics-panel wow fadeInUp" data-wow-delay="0.2s">
+          <div class="panel-header">
+            <span class="panel-badge">WMS</span>
+            <h3>WMS — Warehouse Management System</h3>
+          </div>
+          <p class="panel-copy">Control of warehouses, inventory, locations, racks, receiving, shipping, movements, counts and traceability.</p>
+          <ul class="feature-list">
+            <li>Locations and racks.</li>
+            <li>Receiving and shipping.</li>
+            <li>Inventory.</li>
+            <li>Counts.</li>
+            <li>Movements.</li>
+            <li>Traceability.</li>
+          </ul>
+          <div class="mockup-placeholder" aria-label="WMS system mockup">
+            <div class="mockup-window">
+              <div class="mockup-toolbar"><span></span><span></span><span></span></div>
+              <div class="mockup-body">
+                <div class="mockup-side"></div>
+                <div class="mockup-main">
+                  <div class="mockup-row short"></div>
+                  <div class="mockup-row"></div>
+                  <div class="mockup-row medium"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="logistics-panel wow fadeInUp" data-wow-delay="0.4s">
+          <div class="panel-header">
+            <span class="panel-badge panel-badge--alt">TMS</span>
+            <h3>TMS — Transportation Management System</h3>
+          </div>
+          <p class="panel-copy">Control of transportation, trips, vehicles, drivers, proof of delivery, documentation and logistics tracking.</p>
+          <ul class="feature-list">
+            <li>Trips and routes.</li>
+            <li>Vehicles.</li>
+            <li>Drivers.</li>
+            <li>Proof of delivery.</li>
+            <li>Deliveries.</li>
+            <li>Traceability.</li>
+          </ul>
+          <div class="mockup-placeholder" aria-label="TMS system mockup">
+            <div class="mockup-window mockup-window--alt">
+              <div class="mockup-toolbar"><span></span><span></span><span></span></div>
+              <div class="mockup-body mockup-body--alt">
+                <div class="route-line"></div>
+                <div class="route-nodes">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="mockup-stat-card"></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="logistics-panel wow fadeInUp" data-wow-delay="0.6s">
+          <div class="panel-header">
+            <span class="panel-badge panel-badge--mes">MES</span>
+            <h3>MES — Manufacturing Execution System</h3>
+          </div>
+          <p class="panel-copy">Digitization and tracking of the execution of production processes, work orders, progress, incidents and production traceability.</p>
+          <ul class="feature-list">
+            <li>Production orders.</li>
+            <li>Processes.</li>
+            <li>Progress.</li>
+            <li>Incidents.</li>
+            <li>Evidence.</li>
+            <li>Traceability.</li>
+          </ul>
+          <div class="mockup-placeholder" aria-label="MES system mockup">
+            <div class="mockup-window mockup-window--mes">
+              <div class="mockup-toolbar"><span></span><span></span><span></span></div>
+              <div class="mockup-body mockup-body--mes">
+                <div class="mes-column"></div>
+                <div class="mes-column mes-column--strong"></div>
+                <div class="mes-column"></div>
+                <div class="mes-timeline"></div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="ctpat-block wow fadeInUp" data-wow-delay="0.3s">
+        <h3>TMS and CTPAT</h3>
+        <p>TMS solutions can support companies in controlling the information, evidence, traceability and documentation used in processes related to CTPAT (Customs Trade Partnership Against Terrorism).</p>
+        <p class="ctpat-note">The software is an operational and document support tool; it does not replace or guarantee CTPAT certification.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-success mega-section" id="results">
+    <div class="container">
+      <div class="section-heading center-heading wow fadeInUp" data-wow-delay="0.2s">
+        <span class="tag-line">Results in real projects</span>
+        <h2 class="section-title2">Results in real projects</h2>
+      </div>
+
+      <div class="success-case wow fadeInUp" data-wow-delay="0.3s">
+        <div class="success-metric" aria-label="Improvement estimated by the client: approximately 70 percent">
+          <span class="metric-sign">~</span>
+          <span class="metric-value">70%</span>
+        </div>
+
+        <div class="success-copy">
+          <span class="case-tag success-tag">MES / Operational Traceability</span>
+          <p class="success-title">Estimated improvement in error control and traceability</p>
+          <p class="success-text">Development of a custom solution to digitize operational processes, improve information control and strengthen traceability within Huasion Motors México's operations.</p>
+          <p class="success-note">Estimate provided by the client based on their operational experience.</p>
+          <h3 class="success-client">Huasion Motors México</h3>
+        </div>
+
+        <div class="success-shot">
+          <div class="mockup-placeholder mockup-placeholder--small" aria-label="Placeholder for a screenshot of the system in a real project">
+            <div class="mockup-window mockup-window--compact">
+              <div class="mockup-toolbar"><span></span><span></span><span></span></div>
+              <div class="mockup-body mockup-body--compact">
+                <div class="compact-bars">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-solutions wow fadeInUp" data-wow-delay="0.35s">
+        <h3 class="project-solutions-title">Solutions applied in real projects</h3>
+        <p class="project-solutions-intro">We build custom solutions to digitize operational, administrative and logistics processes according to each organization's needs.</p>
+      </div>
+
+      <div class="demo-grid case-grid compact-case-grid compact-case-grid--two">
+        <article class="demo-card case-card compact-case-card wow fadeInUp" data-wow-delay="0.4s">
+          <div class="demo-visual demo-visual--entries" aria-label="Placeholder for a screenshot of the Florería Hortensia system"></div>
+          <div class="case-body">
+            <span class="case-tag">Order and delivery management</span>
+            <h3>Florería Hortensia</h3>
+            <p>Development of a solution to centralize the management of orders, customers, products and delivery tracking, making it easier to control daily operations and coordinate flower arrangement deliveries.</p>
+            <p class="case-concepts">Orders · Customers · Products · Deliveries · Operations</p>
+          </div>
+        </article>
+        <article class="demo-card case-card compact-case-card wow fadeInUp" data-wow-delay="0.5s">
+          <div class="demo-visual demo-visual--racks" aria-label="Placeholder for a screenshot of the COEXSA system"></div>
+          <div class="case-body">
+            <span class="case-tag">Infrastructure project management</span>
+            <h3>COEXSA</h3>
+            <p>Development and integration of a system to centralize the administration of urban infrastructure projects, including budgets, purchasing, piecework contracts, project tracking, investment control and management of operational incidents.</p>
+            <p class="case-concepts">Projects · Budgets · Purchasing · Piecework · Investment · Incidents</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- About                                                        -->
+  <!-- ============================================================ -->
+  <section class="about mega-section" id="about">
+    <div class="container">
+      <!-- Primera sección about -->
+      <div class="content-block">
+        <div class="row">
+          <div class="col-12 col-lg-6 d-flex align-items-center about-col wow fadeInUp" data-wow-delay="0.2s">
+            <div class="img-area">
+              <div class="photo-banner-end">
+                <i class="fas fa-pen-nib icon"></i>
+                <p class="banner-text">We empower businesses with innovative, tailored technology solutions.</p>
+              </div>
+              <picture>
+                <source type="image/webp" srcset="/img/about-1_photo.webp" />
+                <img class="about-img img-fluid" src="/img/about-1_photo.png"
+                  alt="Kernesys - Mexican software development and digital transformation company since 2019"
+                  width="616" height="800" loading="lazy" decoding="async" />
+              </picture>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 d-flex align-items-center about-col wow fadeInUp" data-wow-delay="0.4s">
+            <div class="text-area">
+              <span class="tag-line">About us</span>
+              <h2 class="about-title">Technology transformation, made in Mexico</h2>
+              <p class="about-text">We are proud to be a 100% Mexican company dedicated to driving the
+                digital transformation of businesses. Our commitment is to help our clients optimize
+                and automate their processes and business rules, taking them to new levels of efficiency
+                and success.</p>
+              <div class="about-stats stats-counter">
+                <div class="row g-0">
+                  <div class="col-4">
+                    <div class="stat-box">
+                      <p class="stat-num">
+                        <span class="sign">+</span>
+                        <span class="counter" data-from="10" data-to="60" data-speed="3000">60</span>
+                      </p>
+                      <p class="stat-desc mb-2">Projects</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="stat-box">
+                      <p class="stat-num">
+                        <span class="sign">+</span>
+                        <span class="counter" data-from="25" data-to="50" data-speed="3000">50</span>
+                      </p>
+                      <p class="stat-desc mb-2">Clients</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="stat-box">
+                      <p class="stat-num">
+                        <span class="sign">+</span>
+                        <span class="counter" data-from="0" data-to="15" data-speed="3000">15</span>
+                      </p>
+                      <p class="stat-desc mb-2">Migrations</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Segunda sección about: Misión -->
+      <div class="content-block">
+        <div class="row">
+          <div class="order-2 col-12 col-lg-6 d-flex align-items-center order-lg-0 about-col wow fadeInUp" data-wow-delay="0.2s">
+            <div class="text-area">
+              <span class="tag-line">Our Mission</span>
+              <h2 class="about-title">Supporting you on the path to business success</h2>
+              <div class="info-items">
+                <div class="row g-0">
+                  <div class="col-12">
+                    <p class="about-text">At Kernesys, our mission is to support you on your path to business
+                      success by providing innovative technology solutions that transform and optimize
+                      your processes. We are committed to helping you achieve your goals by automating
+                      and systematizing your operations, so you can focus on what really matters:
+                      growing your business.</p>
+                    <a class="service-more" href="/en/about/">Learn more about us <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                  </div>
+                  <div class="col-12">
+                    <ul class="menu-items">
+                      <li class="info-item">
+                        <picture><source type="image/webp" srcset="/img/icon-2.webp" />
+                          <img class="info-img-icon" src="/img/icon-2.png"
+                            alt="Unique experiences in software development - Kernesys"
+                            width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
+                        <div class="info-content">
+                          <h3 class="info-title">Unique experiences</h3>
+                          <p class="info-text">We are dedicated to creating unique experiences through our
+                            custom software solutions. Every project is an opportunity to build
+                            applications that not only meet your business needs, but also
+                            improve the user experience and strengthen your brand in the market.</p>
+                        </div>
+                      </li>
+                      <li class="info-item">
+                        <picture><source type="image/webp" srcset="/img/icon-3.webp" />
+                          <img class="info-img-icon" src="/img/icon-3.png"
+                            alt="Business value with advanced technology - Kernesys"
+                            width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
+                        <div class="info-content">
+                          <h3 class="info-title">Business value</h3>
+                          <p class="info-text">We add value to your business by implementing advanced
+                            technologies and innovative strategies. Our focus on excellence
+                            in software development ensures that every solution not only solves
+                            problems, but also drives your company's growth and
+                            efficiency.</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 d-flex align-items-center about-col order-0 order-lg-2 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="img-area">
+              <div class="photo-banner-start">
+                <i class="fas fa-code icon"></i>
+                <p class="banner-text">We innovate to optimize and boost your business success</p>
+              </div>
+              <picture>
+                <source type="image/webp" srcset="/img/about-2_photo.webp" />
+                <img class="img-fluid about-img" src="/img/about-2_photo.png"
+                  alt="Kernesys - Our mission is to guide clients to success with technology solutions"
+                  width="600" height="800" loading="lazy" decoding="async" />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Clientes                                                     -->
+  <!-- ============================================================ -->
+  <section class="our-clients elf-section section-bg-shade" id="our-clients">
+    <div class="container">
+      <div class="section-heading">
+        <h2 class="section-title2">They trust us!</h2>
+        </div>
+      <div class="line line-solid-main-color wow fadeIn" data-wow-delay="1s"></div>
+    </div>
+    <div class="container">
+      <div class="flex-wrap clients-logos d-flex align-items-center justify-content-around">
+        <div class="swiper-container">
+          <div class="swiper-wrapper clients-logo-wraper" role="list" aria-label="Kernesys clients">
+            <div class="swiper-slide" role="listitem">
+              <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
+                <picture><source type="image/webp" srcset="/img/FloreriaHortensia2.webp" />
+                  <img class="img-fluid logo" src="/img/FloreriaHortensia2.png" alt="Florería Hortensia logo"
+                    width="500" height="190" loading="lazy" decoding="async" /></picture>
+              </div>
+            </div>
+            <div class="swiper-slide" role="listitem">
+              <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
+                <picture><source type="image/webp" srcset="/img/Spa.webp" />
+                  <img class="img-fluid logo" src="/img/Spa.png" alt="Spa logo"
+                    width="480" height="249" loading="lazy" decoding="async" /></picture>
+              </div>
+            </div>
+            <div class="swiper-slide" role="listitem">
+              <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
+                <picture><img class="img-fluid logo" src="/img/LogoLabNova.png" alt="Lab Nova logo"
+                    width="480" height="249" loading="lazy" decoding="async" /></picture>
+              </div>
+            </div>
+            <div class="swiper-slide" role="listitem">
+              <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
+                <picture><source type="image/webp" srcset="/img/Coexsa.webp" />
+                  <img class="img-fluid logo" src="/img/Coexsa.png" alt="Grupo Coexsa logo"
+                    width="200" height="200" loading="lazy" decoding="async"
+                    style="min-width:140px;max-height:120px;" /></picture>
+              </div>
+            </div>
+            <div class="swiper-slide" role="listitem">
+              <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
+                <picture><source type="image/webp" srcset="/img/biofase.webp" />
+                  <img class="img-fluid logo" src="/img/biofase.png" alt="Biofase logo"
+                    width="500" height="126" loading="lazy" decoding="async" /></picture>
+              </div>
+            </div>
+            <div class="swiper-slide" role="listitem">
+              <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
+                <picture><source type="image/webp" srcset="/img/huasion-logo-no-bg.webp" />
+                  <img class="img-fluid logo" src="/img/huasion-logo-no-bg.webp" alt="Huasion logo"
+                    width="500" height="126" loading="lazy" decoding="async" /></picture>
+              </div>
+            </div>
+            <div class="swiper-slide" role="listitem">
+              <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
+                <picture><source type="image/webp" srcset="/img/carmexloo.webp" />
+                  <img class="img-fluid logo" src="/img/carmexloo.webp" alt="Carmex logo"
+                    width="500" height="126" loading="lazy" decoding="async" /></picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Tech Stack                                                   -->
+  <!-- ============================================================ -->
+  <section class="tech-stack-section mega-section" id="tech-stack">
+    <div class="container">
+      <div class="section-heading center-heading">
+        <h2 class="section-title2 wow" data-splitting="chars">Our Technology Stack</h2>
+        <p class="section-subtitle wow fadeInUp" data-wow-delay=".5s">
+          We build software wherever your team and your customers need it: in the browser, on the computer,
+          on the phone or in your business reports.
+        </p>
+        <div class="line line-solid-main-color wow fadeIn" data-wow-delay="1s"></div>
+      </div>
+
+      <div class="stack-tabs wow fadeInUp" data-wow-delay="0.3s" role="tablist" aria-label="Solution types">
+        <button type="button" class="stack-tab" role="tab" id="stack-tab-web" aria-controls="stack-panel-web" aria-selected="true">
+          <i class="fas fa-globe" aria-hidden="true"></i><span>Web</span>
+        </button>
+        <button type="button" class="stack-tab" role="tab" id="stack-tab-desktop" aria-controls="stack-panel-desktop" aria-selected="false" tabindex="-1">
+          <i class="fas fa-desktop" aria-hidden="true"></i><span>Desktop</span>
+        </button>
+        <button type="button" class="stack-tab" role="tab" id="stack-tab-mobile" aria-controls="stack-panel-mobile" aria-selected="false" tabindex="-1">
+          <i class="fas fa-mobile-alt" aria-hidden="true"></i><span>Mobile</span>
+        </button>
+        <button type="button" class="stack-tab" role="tab" id="stack-tab-data" aria-controls="stack-panel-data" aria-selected="false" tabindex="-1">
+          <i class="fas fa-chart-line" aria-hidden="true"></i><span>Analytics &amp; AI</span>
+        </button>
+      </div>
+
+      <div class="stack-stage wow fadeInUp" data-wow-delay="0.4s">
+
+        <!-- Web -->
+        <div class="stack-panel is-active" role="tabpanel" id="stack-panel-web" aria-labelledby="stack-tab-web"
+             style="--accent:#0a6bab;--accent-soft:#e6f1fa;--panel-bg:linear-gradient(135deg,#dcecf9 0%,#b9d8f1 100%)">
+          <div class="stack-visual" aria-hidden="true">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="20" width="380" height="260" rx="14" fill="#fff"/>
+              <rect x="10" y="20" width="380" height="34" rx="14" fill="#eef3f8"/>
+              <rect x="10" y="40" width="380" height="14" fill="#eef3f8"/>
+              <circle cx="32" cy="37" r="5" fill="#ff6b6b"/><circle cx="48" cy="37" r="5" fill="#ffc84a"/><circle cx="64" cy="37" r="5" fill="#4cd07d"/>
+              <rect x="90" y="29" width="210" height="16" rx="8" fill="#fff"/>
+              <rect x="102" y="35" width="90" height="4" rx="2" fill="#c3d2e2"/>
+              <path d="M10 54 H88 V280 H24 a14 14 0 0 1 -14 -14 Z" fill="#074d7e"/>
+              <rect x="24" y="72" width="50" height="6" rx="3" fill="#ffffff" opacity=".9"/>
+              <rect x="24" y="96" width="44" height="5" rx="2.5" fill="#ffffff" opacity=".45"/>
+              <rect x="24" y="114" width="50" height="5" rx="2.5" fill="#ffffff" opacity=".45"/>
+              <rect x="24" y="132" width="38" height="5" rx="2.5" fill="#ffffff" opacity=".45"/>
+              <rect x="24" y="150" width="46" height="5" rx="2.5" fill="#ffffff" opacity=".45"/>
+              <rect x="104" y="70" width="88" height="54" rx="10" fill="#e6f1fa"/>
+              <rect x="114" y="82" width="40" height="5" rx="2.5" fill="#8fb3d1"/>
+              <rect x="114" y="96" width="56" height="12" rx="4" fill="#0a6bab"/>
+              <rect x="200" y="70" width="88" height="54" rx="10" fill="#e9f8ef"/>
+              <rect x="210" y="82" width="40" height="5" rx="2.5" fill="#8cc9a3"/>
+              <rect x="210" y="96" width="48" height="12" rx="4" fill="#2fa865"/>
+              <rect x="296" y="70" width="80" height="54" rx="10" fill="#fff4e3"/>
+              <rect x="306" y="82" width="40" height="5" rx="2.5" fill="#e2bf87"/>
+              <rect x="306" y="96" width="44" height="12" rx="4" fill="#f0a020"/>
+              <rect x="104" y="136" width="272" height="128" rx="10" fill="#f7fafc" stroke="#e5ecf3"/>
+              <polyline points="120,236 160,214 196,222 232,186 270,196 306,160 356,150" fill="none" stroke="#0a6bab" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <polygon points="120,236 160,214 196,222 232,186 270,196 306,160 356,150 356,252 120,252" fill="#0a6bab" opacity=".1"/>
+              <circle cx="306" cy="160" r="6" fill="#fff" stroke="#0a6bab" stroke-width="3"/>
+            </svg>
+          </div>
+          <div class="stack-content">
+            <span class="stack-kicker"><i class="fas fa-globe" aria-hidden="true"></i>Web systems</span>
+            <h3 class="stack-title">Your operation in the browser, from anywhere</h3>
+            <p class="stack-lead">
+              Portals, admin systems and customer platforms that open with a link.
+              Nothing to install: your team logs in from the office, the warehouse or home.
+            </p>
+            <ul class="stack-benefits">
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>ERP, CRM, inventory and dashboards tailored to your processes.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>User and role-based access, so each person sees only what they should.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Connection to your current systems, invoicing, payments and other platforms.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Works on computers, tablets and phones.</span></li>
+            </ul>
+            <p class="stack-tools-label">Technologies we use</p>
+            <ul class="stack-tools">
+              <li><i class="fab fa-vuejs" aria-hidden="true"></i>Vue.js</li>
+              <li><i class="fab fa-react" aria-hidden="true"></i>React</li>
+              <li><i class="fab fa-angular" aria-hidden="true"></i>Angular</li>
+              <li><i class="fab fa-laravel" aria-hidden="true"></i>Laravel</li>
+              <li><i class="fab fa-node-js" aria-hidden="true"></i>NestJS</li>
+              <li><i class="fab fa-python" aria-hidden="true"></i>FastAPI</li>
+              <li><i class="fab fa-java" aria-hidden="true"></i>Spring Boot</li>
+              <li><i class="fab fa-aws" aria-hidden="true"></i>AWS</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Escritorio -->
+        <div class="stack-panel" role="tabpanel" id="stack-panel-desktop" aria-labelledby="stack-tab-desktop"
+             style="--accent:#5b4bc4;--accent-soft:#eeebfb;--panel-bg:linear-gradient(135deg,#e7e3fb 0%,#cdc5f3 100%)">
+          <div class="stack-visual" aria-hidden="true">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <rect x="40" y="10" width="320" height="214" rx="12" fill="#2d3348"/>
+              <rect x="52" y="22" width="296" height="190" rx="4" fill="#fff"/>
+              <rect x="52" y="22" width="296" height="22" fill="#5b4bc4"/>
+              <rect x="62" y="30" width="60" height="6" rx="3" fill="#fff" opacity=".85"/>
+              <rect x="318" y="30" width="8" height="6" rx="1" fill="#fff" opacity=".6"/><rect x="330" y="30" width="8" height="6" rx="1" fill="#fff" opacity=".6"/>
+              <rect x="52" y="44" width="296" height="20" fill="#f3f1fd"/>
+              <rect x="62" y="50" width="28" height="8" rx="2" fill="#cfc8f3"/><rect x="96" y="50" width="28" height="8" rx="2" fill="#cfc8f3"/><rect x="130" y="50" width="28" height="8" rx="2" fill="#cfc8f3"/>
+              <rect x="62" y="74" width="180" height="12" rx="3" fill="#ece9f8"/>
+              <g fill="#d9dee6">
+                <rect x="62" y="96" width="180" height="1"/><rect x="62" y="116" width="180" height="1"/><rect x="62" y="136" width="180" height="1"/><rect x="62" y="156" width="180" height="1"/><rect x="62" y="176" width="180" height="1"/>
+              </g>
+              <g fill="#a8b2c2">
+                <rect x="68" y="103" width="50" height="5" rx="2"/><rect x="140" y="103" width="36" height="5" rx="2"/><rect x="200" y="103" width="30" height="5" rx="2"/>
+                <rect x="68" y="123" width="42" height="5" rx="2"/><rect x="140" y="123" width="30" height="5" rx="2"/><rect x="200" y="123" width="30" height="5" rx="2"/>
+                <rect x="68" y="143" width="56" height="5" rx="2"/><rect x="140" y="143" width="40" height="5" rx="2"/><rect x="200" y="143" width="30" height="5" rx="2"/>
+                <rect x="68" y="163" width="46" height="5" rx="2"/><rect x="140" y="163" width="34" height="5" rx="2"/><rect x="200" y="163" width="30" height="5" rx="2"/>
+              </g>
+              <rect x="62" y="116" width="180" height="20" fill="#5b4bc4" opacity=".1"/>
+              <rect x="254" y="74" width="84" height="128" rx="6" fill="#f7f6fe" stroke="#e3dff8"/>
+              <rect x="264" y="86" width="50" height="5" rx="2" fill="#a59ce0"/>
+              <text x="264" y="118" font-family="Nunito, sans-serif" font-size="20" font-weight="800" fill="#2d3348">$1,280</text>
+              <rect x="264" y="130" width="64" height="4" rx="2" fill="#d9d4f5"/>
+              <rect x="264" y="140" width="48" height="4" rx="2" fill="#d9d4f5"/>
+              <rect x="264" y="172" width="64" height="20" rx="5" fill="#5b4bc4"/>
+              <rect x="280" y="180" width="32" height="4" rx="2" fill="#fff"/>
+              <rect x="62" y="190" width="70" height="14" rx="4" fill="#ece9f8"/>
+              <path d="M170 224 h60 l10 40 h-80 z" fill="#3b4258"/>
+              <rect x="130" y="262" width="140" height="10" rx="5" fill="#2d3348"/>
+              <circle cx="330" cy="250" r="24" fill="#fff"/>
+              <path d="M318 250 l8 8 l16 -16" fill="none" stroke="#2fa865" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="stack-content">
+            <span class="stack-kicker"><i class="fas fa-desktop" aria-hidden="true"></i>Desktop applications</span>
+            <h3 class="stack-title">Powerful programs that keep working even when the internet goes down</h3>
+            <p class="stack-lead">
+              Software installed on your company's computers for points of sale, production and
+              workstations that need speed and control of local hardware.
+            </p>
+            <ul class="stack-benefits">
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Points of sale, production control and counter systems.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>They work offline and sync when the internet comes back.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Connection to receipt printers, scales, barcode readers and other devices.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Renewal of old programs that are slowing your team down.</span></li>
+            </ul>
+            <p class="stack-tools-label">Technologies we use</p>
+            <ul class="stack-tools">
+              <li><i class="fab fa-windows" aria-hidden="true"></i>C# / .NET</li>
+              <li><i class="fas fa-microchip" aria-hidden="true"></i>C++</li>
+              <li><i class="fab fa-java" aria-hidden="true"></i>Java</li>
+              <li><i class="fab fa-python" aria-hidden="true"></i>Python</li>
+              <li><i class="fas fa-database" aria-hidden="true"></i>MySQL</li>
+              <li><i class="fas fa-database" aria-hidden="true"></i>PostgreSQL</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Móvil -->
+        <div class="stack-panel" role="tabpanel" id="stack-panel-mobile" aria-labelledby="stack-tab-mobile"
+             style="--accent:#0f8a6a;--accent-soft:#e3f6f0;--panel-bg:linear-gradient(135deg,#d8f3ea 0%,#ade3d1 100%)">
+          <div class="stack-visual" aria-hidden="true">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <rect x="130" y="6" width="140" height="288" rx="26" fill="#1f2937"/>
+              <rect x="140" y="16" width="120" height="268" rx="18" fill="#fff"/>
+              <rect x="180" y="22" width="40" height="8" rx="4" fill="#1f2937"/>
+              <rect x="140" y="38" width="120" height="54" fill="#0f8a6a"/>
+              <rect x="152" y="50" width="46" height="6" rx="3" fill="#fff" opacity=".7"/>
+              <rect x="152" y="64" width="72" height="12" rx="4" fill="#fff"/>
+              <g>
+                <rect x="150" y="104" width="100" height="38" rx="8" fill="#f2f7f5"/>
+                <circle cx="166" cy="123" r="9" fill="#bfe7da"/>
+                <rect x="182" y="116" width="50" height="5" rx="2.5" fill="#7fae9f"/><rect x="182" y="127" width="34" height="4" rx="2" fill="#c7dcd5"/>
+                <rect x="150" y="150" width="100" height="38" rx="8" fill="#f2f7f5"/>
+                <circle cx="166" cy="169" r="9" fill="#bfe7da"/>
+                <rect x="182" y="162" width="44" height="5" rx="2.5" fill="#7fae9f"/><rect x="182" y="173" width="30" height="4" rx="2" fill="#c7dcd5"/>
+                <rect x="150" y="196" width="100" height="38" rx="8" fill="#f2f7f5"/>
+                <circle cx="166" cy="215" r="9" fill="#bfe7da"/>
+                <rect x="182" y="208" width="52" height="5" rx="2.5" fill="#7fae9f"/><rect x="182" y="219" width="28" height="4" rx="2" fill="#c7dcd5"/>
+              </g>
+              <rect x="150" y="246" width="100" height="24" rx="12" fill="#0f8a6a"/>
+              <rect x="180" y="256" width="40" height="4" rx="2" fill="#fff"/>
+              <rect x="10" y="60" width="122" height="46" rx="12" fill="#fff"/>
+              <circle cx="32" cy="83" r="11" fill="#0f8a6a"/>
+              <path d="M27 83 l4 4 l7 -8" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="50" y="74" width="66" height="6" rx="3" fill="#4b5563"/><rect x="50" y="86" width="48" height="5" rx="2.5" fill="#cbd5e1"/>
+              <rect x="276" y="176" width="114" height="74" rx="12" fill="#fff"/>
+              <path d="M300 196 c0 -10 16 -10 16 0 c0 8 -8 16 -8 16 s-8 -8 -8 -16 z" fill="#f05a5a"/>
+              <circle cx="308" cy="196" r="3" fill="#fff"/>
+              <rect x="326" y="192" width="50" height="5" rx="2.5" fill="#4b5563"/><rect x="326" y="203" width="36" height="4" rx="2" fill="#cbd5e1"/>
+              <rect x="290" y="222" width="86" height="16" rx="8" fill="#e3f6f0"/>
+              <rect x="290" y="222" width="58" height="16" rx="8" fill="#0f8a6a"/>
+            </svg>
+          </div>
+          <div class="stack-content">
+            <span class="stack-kicker"><i class="fas fa-mobile-alt" aria-hidden="true"></i>Mobile apps</span>
+            <h3 class="stack-title">Your business in the pocket of your customers and your team</h3>
+            <p class="stack-lead">
+              Apps for iPhone and Android, for your customers or for your field staff: salespeople,
+              delivery drivers, technicians and supervisors.
+            </p>
+            <ul class="stack-benefits">
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>A single app for iPhone and Android, which reduces time and cost.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Orders, delivery routes, data collection and photo evidence.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Notifications, GPS location and barcode scanning with the camera.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Publishing on the App Store and Google Play.</span></li>
+            </ul>
+            <p class="stack-tools-label">Technologies we use</p>
+            <ul class="stack-tools">
+              <li><i class="fas fa-feather-alt" aria-hidden="true"></i>Flutter</li>
+              <li><i class="fab fa-android" aria-hidden="true"></i>Android</li>
+              <li><i class="fab fa-apple" aria-hidden="true"></i>iOS</li>
+              <li><i class="fas fa-plug" aria-hidden="true"></i>APIs with Laravel and NestJS</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Analítica e IA -->
+        <div class="stack-panel" role="tabpanel" id="stack-panel-data" aria-labelledby="stack-tab-data"
+             style="--accent:#c0661a;--accent-soft:#fdf0e3;--panel-bg:linear-gradient(135deg,#fdebd7 0%,#f8cfa6 100%)">
+          <div class="stack-visual" aria-hidden="true">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="14" width="380" height="272" rx="14" fill="#fff"/>
+              <rect x="28" y="32" width="120" height="8" rx="4" fill="#3b4258"/>
+              <rect x="28" y="46" width="80" height="5" rx="2.5" fill="#cbd5e1"/>
+              <rect x="28" y="70" width="210" height="136" rx="10" fill="#fbf7f2"/>
+              <g fill="#f2b37a">
+                <rect x="46" y="150" width="18" height="40" rx="3"/>
+                <rect x="74" y="130" width="18" height="60" rx="3"/>
+                <rect x="102" y="140" width="18" height="50" rx="3"/>
+                <rect x="130" y="112" width="18" height="78" rx="3"/>
+              </g>
+              <g fill="#c0661a">
+                <rect x="158" y="100" width="18" height="90" rx="3" opacity=".35"/>
+                <rect x="186" y="86" width="18" height="104" rx="3" opacity=".35"/>
+              </g>
+              <polyline points="55,146 83,126 111,134 139,106 167,92 195,76" fill="none" stroke="#c0661a" stroke-width="3" stroke-linecap="round"/>
+              <line x1="148" y1="80" x2="148" y2="196" stroke="#c0661a" stroke-dasharray="4 4" opacity=".6"/>
+              <rect x="152" y="76" width="64" height="16" rx="8" fill="#c0661a"/>
+              <text x="160" y="88" font-family="Nunito, sans-serif" font-size="10" font-weight="800" fill="#fff">Forecast</text>
+              <circle cx="310" cy="128" r="54" fill="none" stroke="#f6dfc8" stroke-width="20"/>
+              <circle cx="310" cy="128" r="54" fill="none" stroke="#c0661a" stroke-width="20" stroke-dasharray="220 340" transform="rotate(-90 310 128)"/>
+              <circle cx="310" cy="128" r="54" fill="none" stroke="#f2b37a" stroke-width="20" stroke-dasharray="70 340" stroke-dashoffset="-220" transform="rotate(-90 310 128)"/>
+              <text x="310" y="134" text-anchor="middle" font-family="Nunito, sans-serif" font-size="18" font-weight="800" fill="#3b4258">72%</text>
+              <rect x="28" y="222" width="108" height="48" rx="10" fill="#fdf0e3"/>
+              <rect x="40" y="234" width="50" height="5" rx="2.5" fill="#e0a877"/>
+              <text x="40" y="260" font-family="Nunito, sans-serif" font-size="15" font-weight="800" fill="#3b4258">+18%</text>
+              <rect x="146" y="222" width="108" height="48" rx="10" fill="#fdf0e3"/>
+              <rect x="158" y="234" width="50" height="5" rx="2.5" fill="#e0a877"/>
+              <text x="158" y="260" font-family="Nunito, sans-serif" font-size="15" font-weight="800" fill="#3b4258">1,240</text>
+              <rect x="264" y="222" width="108" height="48" rx="10" fill="#c0661a"/>
+              <rect x="276" y="234" width="50" height="5" rx="2.5" fill="#fff" opacity=".7"/>
+              <path d="M278 258 l8 -8 l6 6 l12 -12" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="stack-content">
+            <span class="stack-kicker"><i class="fas fa-chart-line" aria-hidden="true"></i>Business analytics and machine learning</span>
+            <h3 class="stack-title">Turn your data into decisions</h3>
+            <p class="stack-lead">
+              We bring together the information that is now scattered across spreadsheets and systems, and turn it
+              into clear dashboards and metrics that tell you what is happening and what's coming.
+            </p>
+            <ul class="stack-benefits">
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Dashboards with sales, inventory and productivity, updated without manual work.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Demand forecasts to buy and produce just what you need.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Automatic alerts when something is out of the ordinary.</span></li>
+              <li><i class="fas fa-check" aria-hidden="true"></i><span>Fast searches over large volumes of information.</span></li>
+            </ul>
+            <p class="stack-tools-label">Technologies we use</p>
+            <ul class="stack-tools">
+              <li><i class="fab fa-python" aria-hidden="true"></i>Python</li>
+              <li><i class="fas fa-brain" aria-hidden="true"></i>Machine learning</li>
+              <li><i class="fas fa-database" aria-hidden="true"></i>PostgreSQL</li>
+              <li><i class="fas fa-leaf" aria-hidden="true"></i>MongoDB</li>
+              <li><i class="fas fa-search" aria-hidden="true"></i>Elasticsearch</li>
+              <li><i class="fab fa-aws" aria-hidden="true"></i>AWS</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <p class="stack-note wow fadeInUp" data-wow-delay="0.5s">
+        <i class="fas fa-lightbulb" aria-hidden="true"></i>We don't start with technology: first we understand your need,
+        and then we choose the tool that best solves it.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Proyectos                                                     -->
+  <!-- ============================================================ -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-heading center-heading">
+        <h2 class="section-title2 wow" data-splitting="chars">Our Projects</h2>
+        <p class="section-subtitle wow fadeInUp" data-wow-delay=".4s">
+          Every project is a story of successful digital transformation. Explore some of the solutions we have built for our clients.</p>
+        <div class="line line-solid-main-color wow fadeIn" data-wow-delay="0.8s"></div>
+      </div>
+
+      <!-- Filtros -->
+      <div class="projects-filter wow fadeInUp" data-wow-delay="0.3s" id="projects-filters" role="group" aria-label="Filter projects by category">
+        <button type="button" class="pf-btn active" data-filter="all"><i class="fas fa-th"></i> All</button>
+        <button type="button" class="pf-btn" data-filter="erp"><i class="fas fa-chart-line"></i> ERP / CRM</button>
+        <button type="button" class="pf-btn" data-filter="mobile"><i class="fas fa-mobile-alt"></i> Mobile</button>
+        <button type="button" class="pf-btn" data-filter="ecommerce"><i class="fas fa-shopping-cart"></i> E-Commerce</button>
+        <button type="button" class="pf-btn" data-filter="web"><i class="fas fa-globe"></i> Web</button>
+        <button type="button" class="pf-btn" data-filter="inventory"><i class="fas fa-warehouse"></i> Warehouse / Inventory</button>
+      </div>
+
+      <!-- Grid de proyectos (filtrado con Vanilla JS en js/main.js) -->
+      <div class="row" id="projects-grid">
+
+        <!-- NexoCRM -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-erp wow fadeInUp" data-wow-delay="0.1s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);">
+              <i class="fas fa-users-cog"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-badge">Business CRM</span>
+              <h3 class="project-title">NexoCRM</h3>
+              <p class="project-desc">Custom CRM with a visual sales pipeline, follow-up automations and real-time reports. Centralizes your entire customer relationship in a single system.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CivixPro -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-erp wow fadeInUp" data-wow-delay="0.2s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);">
+              <i class="fas fa-hard-hat"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-badge">Construction Management</span>
+              <h3 class="project-title">CivixPro</h3>
+              <p class="project-desc">Platform for managing construction and urban works projects. Control progress, budgets, purchase orders and work crews in a single tool.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FleetTrack -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-erp wow fadeInUp" data-wow-delay="0.3s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%);">
+              <i class="fas fa-truck"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-badge">Logistics</span>
+              <h3 class="project-title">FleetTrack</h3>
+              <p class="project-desc">Logistics management and fleet tracking system for transportation companies. Smart dispatch, GPS tracking, digital logbooks and operational efficiency reports.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FitCore -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-mobile wow fadeInUp" data-wow-delay="0.1s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#43e97b 0%,#38f9d7 100%);">
+              <i class="fas fa-dumbbell"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-badge">Mobile App</span>
+              <h3 class="project-title">FitCore</h3>
+              <p class="project-desc">App for gyms with digital memberships and subscriptions, access control, attendance history, online payments and push notifications to keep your members active.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- BloomPoint -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-ecommerce wow fadeInUp" data-wow-delay="0.2s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#fa709a 0%,#fee140 100%);">
+              <i class="fas fa-store"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-badge">E-Commerce</span>
+              <h3 class="project-title">BloomPoint</h3>
+              <p class="project-desc">E-commerce platform for flower shops with a digital catalog, order management by date, delivery routes, integrated payments and real-time floral inventory management.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zenbook -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-mobile wow fadeInUp" data-wow-delay="0.3s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#a18cd1 0%,#fbc2eb 100%);">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-badge">Booking App</span>
+              <h3 class="project-title">Zenbook</h3>
+              <p class="project-desc">Online scheduling system for spas, beauty salons and wellness centers. 24/7 service booking, automatic reminders and schedule management for multiple staff members.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- VoltaERP -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-erp wow fadeInUp" data-wow-delay="0.1s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#0f2027 0%,#203a43 50%,#2c5364 100%);">
+              <i class="fas fa-industry"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-badge">Manufacturing ERP</span>
+              <h3 class="project-title">VoltaERP</h3>
+              <p class="project-desc">Specialized ERP for a plant manufacturing electric vehicle components. Integrated production control, part traceability, quality, warehouse and work orders.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DeskFlow -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-web wow fadeInUp" data-wow-delay="0.2s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#11998e 0%,#38ef7d 100%);">
+              <i class="fas fa-headset"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-badge">Helpdesk</span>
+              <h3 class="project-title">DeskFlow</h3>
+              <p class="project-desc">Technical support and maintenance platform with ticket management, SLAs, a knowledge base and performance reports. Ideal for IT, customer support and industrial maintenance teams.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PyMets POS -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-web wow fadeInUp" data-wow-delay="0.3s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#f7971e 0%,#ffd200 100%);">
+              <i class="fas fa-cash-register"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-badge">Point of Sale</span>
+              <h3 class="project-title">PyMets</h3>
+              <p class="project-desc">Point-of-sale system for SMBs with real-time inventory, cash register closings, multiple payment methods, SAT electronic invoicing (Mexico) and sales reports by branch.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ProcureX -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-erp wow fadeInUp" data-wow-delay="0.1s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);">
+              <i class="fas fa-file-invoice-dollar"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-badge">Purchasing</span>
+              <h3 class="project-title">ProcureX</h3>
+              <p class="project-desc">Purchase order and supplier management system. Quote comparisons, workflow approvals, delivery tracking and automated reconciliation with accounts payable.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- QuickDrop -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-mobile wow fadeInUp" data-wow-delay="0.2s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#f953c6 0%,#b91d73 100%);">
+              <i class="fas fa-motorcycle"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-badge">Delivery App</span>
+              <h3 class="project-title">QuickDrop</h3>
+              <p class="project-desc">Home delivery ordering app with real-time tracking, smart driver assignment, integrated payments and an admin panel for restaurants and local businesses.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- StockIQ -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-inventory cat-erp wow fadeInUp" data-wow-delay="0.1s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#134e5e 0%,#71b280 100%);"><i class="fas fa-warehouse"></i></div>
+            <div class="project-card-body">
+              <span class="project-badge">Warehouse / Inventory</span>
+              <h3 class="project-title">StockIQ</h3>
+              <p class="project-desc">Smart WMS for warehouse management and inventory control of raw materials, supplies and merchandise. Automated FIFO, LIFO and weighted average costing, minimum stock alerts, lot traceability and real-time valuation reports.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- MediLink -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-mobile wow fadeInUp" data-wow-delay="0.3s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#56ccf2 0%,#2f80ed 100%);">
+              <i class="fas fa-stethoscope"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-badge">Digital Health</span>
+              <h3 class="project-title">MediLink</h3>
+              <p class="project-desc">Telemedicine platform with video consultations, digital medical records, e-prescriptions and appointment scheduling. Connects patients with doctors from any device.</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /projects-grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Preguntas frecuentes (mismo texto que el JSON-LD FAQPage)    -->
+  <!-- ============================================================ -->
+  <section class="faq-section mega-section" id="faq">
+    <div class="container">
+      <div class="section-heading center-heading">
+        <h2 class="section-title2">Frequently asked questions</h2>
+        <div class="line line-solid-main-color"></div>
+      </div>
+      <div class="row">
+        <div class="mx-auto col-12 col-lg-9">
+          <details class="faq-item" open>
+            <summary class="faq-question"><h3>What software development services does Kernesys offer?</h3></summary>
+            <p class="faq-answer">Kernesys offers custom software development, WMS solutions for warehouses, TMS for transportation and MES for production, ERP and CRM systems, process automation, systems integration and cloud services (AWS), mobile apps built with Flutter, and system migration and modernization.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question"><h3>Where is Kernesys located?</h3></summary>
+            <p class="faq-answer">Kernesys is headquartered in Monterrey, Nuevo León, Mexico, and serves clients from all over the world.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question"><h3>What technologies does Kernesys use?</h3></summary>
+            <p class="faq-answer">We choose the technology based on what each project needs. For web systems we use Vue.js, React and Angular, with Laravel, NestJS, FastAPI and Spring Boot; for desktop applications, C# / .NET, C++, Java and Python; for iPhone and Android mobile apps, Flutter; and for analytics and machine learning, Python, PostgreSQL, MongoDB and Elasticsearch. We use AWS for cloud infrastructure.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question"><h3>Does Kernesys develop mobile apps?</h3></summary>
+            <p class="faq-answer">Yes, Kernesys develops mobile apps with Flutter, which allows us to build fast, smooth experiences on both iOS and Android from a single, efficient codebase.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question"><h3>How long has Kernesys been in business?</h3></summary>
+            <p class="faq-answer">Kernesys is a 100% Mexican company operating since 2019, dedicated to driving the digital transformation of businesses through innovative, tailored technology solutions.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question"><h3>How long does a software project with Kernesys take?</h3></summary>
+            <p class="faq-answer">It depends on the complexity. A website can be ready in 2–4 weeks, a mobile app in 6–12 weeks and a complete ERP or CRM system in 3–6 months. We always provide a detailed timeline before starting so you have full visibility into the process.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question"><h3>Does Kernesys offer support and maintenance after launch?</h3></summary>
+            <p class="faq-answer">Yes, all our projects include a post-launch support period. We also offer extended maintenance plans with updates, fixes and technical assistance to keep your system running optimally over the long term.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question"><h3>Does Kernesys work with companies outside Monterrey and Mexico?</h3></summary>
+            <p class="faq-answer">Yes, we work with clients throughout Mexico, Latin America and the United States. Thanks to our remote work methodologies and collaboration tools, distance is not an obstacle to delivering high-quality software projects.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Contacto                                                     -->
+  <!-- ============================================================ -->
+  <section class="contact-us mega-section section-bg-shade" id="contact-us" style="min-height:600px;contain:layout;">
+    <div class="container">
+      <div class="section-heading center-heading">
+        <h2 class="section-title2 wow" data-splitting="chars">Contact us</h2>
+        <p class="section-subtitle wow fadeInUp" data-wow-delay=".5s">
+          We want to hear your ideas! Share them with us and let's build something amazing together.</p>
+        <div class="line line-solid-main-color wow fadeIn" data-wow-delay="1s"></div>
+      </div>
+      <div class="row">
+        <div class="mx-auto col-12 col-lg-9 wow fadeInUp" data-wow-delay="0.4s">
+          <div class="main-form-wraper">
+            <form class="main-form" id="contact-us-form" method="post"
+              action="https://api.web3forms.com/submit" novalidate>
+              <input type="hidden" name="access_key" value="9f1456ea-5d9c-43a6-8c36-6df8545ead4b">
+              <input type="hidden" name="from_name" value="Sitio web Kernesys (EN)">
+              <input type="hidden" name="redirect" value="https://www.kernesys.com/en/">
+              <div class="row">
+                <div class="col-12 col-lg-6">
+                  <div class="input-wraper">
+                    <input class="text-input" id="user-name" name="name" type="text" autocomplete="name" maxlength="120" required>
+                    <label for="user-name">Name<span class="req">*</span></label>
+                    <span class="b-border"></span><span class="error-msg" aria-live="polite"></span>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                  <div class="input-wraper">
+                    <input class="text-input" id="user-email" name="email" type="email" autocomplete="email" maxlength="160" required>
+                    <label for="user-email">Email<span class="req">*</span></label>
+                    <span class="b-border"></span><span class="error-msg" aria-live="polite"></span>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-12">
+                  <div class="input-wraper">
+                    <input class="text-input" id="msg-subject" name="subject" type="text" maxlength="160" required>
+                    <label for="msg-subject">Subject<span class="req">*</span></label>
+                    <span class="b-border"></span><span class="error-msg" aria-live="polite"></span>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="input-wraper">
+                    <textarea class="text-input" id="msg-text" name="message" maxlength="5000" required></textarea>
+                    <label for="msg-text">Your message<span class="req">*</span></label>
+                    <span class="b-border"></span><span class="error-msg" aria-live="polite"></span>
+                  </div>
+                </div>
+                <input type="checkbox" name="botcheck" class="d-none" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <div class="col-6 submit-wraper">
+                  <button class="ma-btn-primary" id="submit-btn" type="submit">Send</button>
+                </div>
+                <div class="col-6">
+                  <p class="done-msg" role="status" aria-live="polite"></p>
+                </div>
+                <div class="col-12">
+                  <p class="form-privacy-note">By submitting this form you accept our
+                    <a href="/en/privacy/">Privacy Notice</a>.</p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Footer                                                       -->
+  <!-- ============================================================ -->
+  <footer class="page-footer dark-color-footer" id="page-footer">
+    <div class="container">
+      <div class="row justify-content-center footer-cols">
+        <div class="col-12 col-md-8 col-lg-5 footer-col wow fadeInUp" data-wow-delay="0.3s">
+          <p class="footer-col-title">About Kernesys</p>
+          <div class="footer-col-content-wrapper">
+            <p class="footer-text-about-us">Our focus is on building custom software that automates
+              processes, optimizes operations and helps our clients reach new levels of efficiency and
+              business success.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 footer-col wow fadeInUp" data-wow-delay="0.5s">
+          <p class="footer-col-title">Social media</p>
+          <div class="footer-col-content-wrapper">
+            <ul class="footer-menu">
+              <li class="footer-menu-item">
+                <a class="footer-menu-link" href="https://www.facebook.com/Kernesys/" target="_blank" rel="noopener">Facebook</a>
+              </li>
+              <li class="footer-menu-item">
+                <a class="footer-menu-link" href="https://www.instagram.com/kernesys/" target="_blank" rel="noopener">Instagram</a>
+              </li>
+              <li class="footer-menu-item">
+                <a class="footer-menu-link" href="https://www.linkedin.com/company/kernesys/" target="_blank" rel="noopener">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-4 footer-col wow fadeInUp" data-wow-delay=".9s">
+          <p class="footer-col-title">Contact Information</p>
+          <div class="footer-col-content-wrapper">
+            <div class="contact-info-card">
+              <i class="fas fa-envelope icon" style="color:white" aria-hidden="true"></i>
+              <a class="text-lowercase info" href="mailto:contacto@kernesys.com">contacto@kernesys.com</a>
+            </div>
+            <div class="contact-info-card">
+              <i class="fas fa-globe-africa icon" style="color:white" aria-hidden="true"></i>
+              <a class="text-lowercase info" href="https://www.kernesys.com/en/">www.kernesys.com</a>
+            </div>
+            <div class="contact-info-card">
+              <i class="fas fa-map-marker-alt icon" style="color:white" aria-hidden="true"></i>
+              <span class="info">Monterrey, Nuevo Le&oacute;n, Mexico</span>
+            </div>
+            <div class="contact-info-card">
+              <i class="fas fa-mobile-alt icon" style="color:white" aria-hidden="true"></i>
+              <a class="info" href="tel:+528132471163">+52 81 3247 1163</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyrights">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <p class="creadits">&copy; <span data-current-year>2026</span> Kernesys. All rights reserved.</p>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="terms-links">
+              <a href="/en/terms/">Terms of use</a> |
+              <a href="/en/privacy/">Privacy Notice</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================ -->
+  <!-- WhatsApp Float                                               -->
+  <!-- ============================================================ -->
+  <a class="whatsapp-float"
+    href="https://wa.me/528132471163?text=Hi%20Kernesys%2C%20I%27d%20like%20information%20about%20your%20services."
+    target="_blank" rel="noopener noreferrer"
+    aria-label="Message Kernesys on WhatsApp"
+    title="Message us on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <!-- ============================================================ -->
+  <!-- Volver arriba                                                -->
+  <!-- ============================================================ -->
+  <div class="back-to-top" id="back-to-top">
+    <i class="fas fa-arrow-up icon" aria-hidden="true"></i>
+  </div>
+
+  <!-- ===== Scripts (todos diferidos; sin jQuery) ===== -->
+  <script src="/js/swiper.min.js" defer></script>
+  <script src="/js/splitting.min.js" defer></script>
+  <script src="/js/main.js?v=20261101" defer></script>
+</body>
+
+</html>

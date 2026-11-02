@@ -8,6 +8,9 @@
   <meta name="description" content="Términos y condiciones de uso del sitio web de Kernesys, consultora de desarrollo de software en Monterrey, México." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.kernesys.com/terminos/" />
+  <link rel="alternate" hreflang="es" href="https://www.kernesys.com/terminos/" />
+  <link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/terms/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/terminos/" />
   <meta name="theme-color" content="#074d7e" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
@@ -30,6 +33,13 @@
     .back:hover { text-decoration:underline; }
     .site-footer { border-top:1px solid var(--line); padding:20px 16px; font-size:.9rem; color:var(--muted); }
     .site-footer a { margin-right:12px; }
+    .site-header .inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .lang-switch { display:flex; align-items:center; gap:6px; }
+    .lang-link { display:inline-flex; padding:3px; border:2px solid transparent; border-radius:6px; opacity:.6; line-height:0; transition:opacity .2s ease, border-color .2s ease; }
+    .lang-link img { display:block; width:24px; height:16px; border-radius:3px; }
+    .lang-link:hover, .lang-link:focus-visible { opacity:1; }
+    .lang-link.is-active { opacity:1; border-color:rgba(255,255,255,.85); }
+    .lang-link:focus-visible { outline:2px solid #fff; outline-offset:2px; }
   </style>
 </head>
 
@@ -39,6 +49,10 @@
       <a href="/" aria-label="Kernesys - Inicio">
         <picture><source type="image/webp" srcset="/img/logokernesys.webp" /><img src="/img/logokernesys.png" alt="Kernesys" width="400" height="104" /></picture>
       </a>
+      <div class="lang-switch" role="group" aria-label="Idioma">
+        <a class="lang-link is-active" href="/terminos/" hreflang="es" lang="es" title="Español" aria-current="page"><img src="/img/flags/mx.svg" alt="Español" width="24" height="16" /></a>
+        <a class="lang-link" href="/en/terms/" hreflang="en" lang="en" title="View in English"><img src="/img/flags/us.svg" alt="English" width="24" height="16" /></a>
+      </div>
     </div>
   </header>
 

@@ -10,6 +10,40 @@
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var DESKTOP_MIN = 992;
 
+  /* Textos según el idioma de la página (<html lang="...">).
+     Al agregar un texto, agrégalo en los dos idiomas. */
+  var STRINGS = {
+    es: {
+      openMenu: 'Abrir menú de navegación',
+      backTop: 'Volver arriba',
+      prevSlide: 'Diapositiva anterior',
+      nextSlide: 'Diapositiva siguiente',
+      needName: 'Escribe tu nombre',
+      needEmail: 'Escribe tu correo',
+      needSubject: 'Escribe el asunto',
+      needMessage: 'Escribe tu mensaje',
+      badEmail: 'Escribe un correo válido',
+      sending: 'Enviando…',
+      sent: '¡Gracias! Recibimos tu mensaje y te contactaremos pronto.',
+      failed: 'No pudimos enviar tu mensaje. Inténtalo de nuevo o escríbenos a contacto@kernesys.com.'
+    },
+    en: {
+      openMenu: 'Open navigation menu',
+      backTop: 'Back to top',
+      prevSlide: 'Previous slide',
+      nextSlide: 'Next slide',
+      needName: 'Please enter your name',
+      needEmail: 'Please enter your email',
+      needSubject: 'Please enter a subject',
+      needMessage: 'Please enter your message',
+      badEmail: 'Please enter a valid email',
+      sending: 'Sending…',
+      sent: 'Thank you! We received your message and will get back to you soon.',
+      failed: 'We couldn’t send your message. Please try again or email us at contacto@kernesys.com.'
+    }
+  };
+  var txt = STRINGS[(root.getAttribute('lang') || 'es').slice(0, 2).toLowerCase()] || STRINGS.es;
+
   function $(sel, ctx) { return (ctx || doc).querySelector(sel); }
   function $$(sel, ctx) { return Array.prototype.slice.call((ctx || doc).querySelectorAll(sel)); }
 
@@ -81,7 +115,7 @@
     }
 
     if (toggler && menu) {
-      makeClickable(toggler, 'Abrir menú de navegación');
+      makeClickable(toggler, txt.openMenu);
       toggler.setAttribute('aria-controls', menu.id);
       toggler.setAttribute('aria-expanded', 'false');
       toggler.addEventListener('click', function () { setMenu(!isMenuOpen()); });
@@ -107,7 +141,8 @@
     var brand = $('.navbar-brand');
     if (brand) {
       brand.addEventListener('click', function (e) {
-        if (window.location.pathname === '/' || /index\.html$/.test(window.location.pathname)) {
+        var here = window.location.pathname.replace(/index\.html$/, '');
+        if (brand.pathname === here) {
           e.preventDefault();
           scrollToY(0);
         }
@@ -115,7 +150,7 @@
     }
 
     if (backTop) {
-      makeClickable(backTop, 'Volver arriba');
+      makeClickable(backTop, txt.backTop);
       backTop.addEventListener('click', function () { scrollToY(0); });
     }
 
@@ -215,14 +250,14 @@
       var next = $('.hero-swiper-slider .swiper-button-next');
       function stopAutoplay() { if (hero.autoplay && hero.autoplay.running) hero.autoplay.stop(); }
       if (prev) {
-        makeClickable(prev, 'Diapositiva anterior');
+        makeClickable(prev, txt.prevSlide);
         prev.addEventListener('click', function () {
           stopAutoplay();
           if (hero.isBeginning) hero.slideTo(last()); else hero.slidePrev();
         });
       }
       if (next) {
-        makeClickable(next, 'Diapositiva siguiente');
+        makeClickable(next, txt.nextSlide);
         next.addEventListener('click', function () {
           stopAutoplay();
           if (hero.isEnd) hero.slideTo(0); else hero.slideNext();
@@ -274,6 +309,35 @@
     apply('all', true);
   }
 
+  /* ===== Pestañas del stack (Web, Escritorio, Móvil, Analítica) ===== */
+  function initStackTabs() {
+    var tabs = $$('.stack-tab');
+    if (!tabs.length) return;
+
+    function select(tab, focus) {
+      tabs.forEach(function (t) {
+        var active = t === tab;
+        t.setAttribute('aria-selected', active ? 'true' : 'false');
+        t.tabIndex = active ? 0 : -1;
+        var panel = doc.getElementById(t.getAttribute('aria-controls'));
+        if (panel) panel.classList.toggle('is-active', active);
+      });
+      if (focus) tab.focus();
+    }
+
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener('click', function () { select(tab); });
+      tab.addEventListener('keydown', function (e) {
+        var next = null;
+        if (e.key === 'ArrowRight') next = tabs[(i + 1) % tabs.length];
+        else if (e.key === 'ArrowLeft') next = tabs[(i - 1 + tabs.length) % tabs.length];
+        else if (e.key === 'Home') next = tabs[0];
+        else if (e.key === 'End') next = tabs[tabs.length - 1];
+        if (next) { e.preventDefault(); select(next, true); }
+      });
+    });
+  }
+
   /* ===== Formulario de contacto (Web3Forms vía fetch) ===== */
   function initContactForm() {
     var form = $('#contact-us-form');
@@ -284,10 +348,10 @@
     var inputs = $$('.text-input', form);
     var hideTimer = null;
     var rules = [
-      { el: $('#user-name', form), msg: 'Escribe tu nombre' },
-      { el: $('#user-email', form), msg: 'Escribe tu correo', email: true },
-      { el: $('#msg-subject', form), msg: 'Escribe el asunto' },
-      { el: $('#msg-text', form), msg: 'Escribe tu mensaje' }
+      { el: $('#user-name', form), msg: txt.needName },
+      { el: $('#user-email', form), msg: txt.needEmail, email: true },
+      { el: $('#msg-subject', form), msg: txt.needSubject },
+      { el: $('#msg-text', form), msg: txt.needMessage }
     ];
 
     function syncFilled(input) {
@@ -311,7 +375,7 @@
         var value = rule.el.value.trim();
         var message = '';
         if (!value) message = rule.msg;
-        else if (rule.email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value)) message = 'Escribe un correo válido';
+        else if (rule.email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value)) message = txt.badEmail;
         setError(rule.el, message);
         if (message && !firstInvalid) firstInvalid = rule.el;
       });
@@ -334,7 +398,7 @@
       if (!submitBtn) return;
       if (!submitBtn.getAttribute('data-label')) submitBtn.setAttribute('data-label', submitBtn.textContent);
       submitBtn.disabled = loading;
-      submitBtn.textContent = loading ? 'Enviando…' : submitBtn.getAttribute('data-label');
+      submitBtn.textContent = loading ? txt.sending : submitBtn.getAttribute('data-label');
       form.setAttribute('aria-busy', loading ? 'true' : 'false');
     }
 
@@ -369,10 +433,10 @@
         .then(function () {
           form.reset();
           inputs.forEach(syncFilled);
-          showStatus('¡Gracias! Recibimos tu mensaje y te contactaremos pronto.', 'success');
+          showStatus(txt.sent, 'success');
         })
         .catch(function () {
-          showStatus('No pudimos enviar tu mensaje. Inténtalo de nuevo o escríbenos a contacto@kernesys.com.', 'error');
+          showStatus(txt.failed, 'error');
         })
         .then(function () { setLoading(false); });
     });
@@ -390,12 +454,7 @@
     initSliders();
     initRevealAnimations();
     initCounters();
-    initFilter({
-      buttons: '.tech-tab-btn',
-      buttonAttr: 'data-cat',
-      items: '#tech-grid-inner .tech-card',
-      matches: function (item, value) { return item.getAttribute('data-category') === value; }
-    });
+    initStackTabs();
     initFilter({
       buttons: '#projects-filters .pf-btn',
       buttonAttr: 'data-filter',

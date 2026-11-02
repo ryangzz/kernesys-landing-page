@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Solo URLs canónicas reales. Los fragmentos (#servicios, #contacto…) no se indexan por separado. -->
+<!-- Solo URLs canónicas reales. Los fragmentos (#servicios, #contacto…) no se indexan por separado.
+     Cada página tiene su versión en español e inglés, enlazadas con xhtml:link (hreflang). -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
     <loc>https://www.kernesys.com/</loc>
     <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/" />
     <image:image>
       <image:loc>https://www.kernesys.com/img/og-kernesys.jpg</image:loc>
     </image:image>
@@ -18,13 +23,196 @@
   </url>
 
   <url>
+    <loc>https://www.kernesys.com/en/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/" />
+    <image:image>
+      <image:loc>https://www.kernesys.com/img/og-kernesys.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kernesys.com/img/about-1_photo.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.kernesys.com/img/about-2_photo.webp</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.kernesys.com/nosotros/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/nosotros/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/nosotros/" />
+  </url>
+
+  <url>
+    <loc>https://www.kernesys.com/en/about/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/nosotros/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/nosotros/" />
+  </url>
+
+  <url>
+    <loc>https://www.kernesys.com/software-a-medida-monterrey/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/software-a-medida-monterrey/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/custom-software-monterrey/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/software-a-medida-monterrey/" />
+  </url>
+
+  <url>
+    <loc>https://www.kernesys.com/en/custom-software-monterrey/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/software-a-medida-monterrey/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/custom-software-monterrey/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/software-a-medida-monterrey/" />
+  </url>
+
+  <url>
+    <loc>https://www.kernesys.com/wms-inventarios/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/wms-inventarios/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/wms-inventory/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/wms-inventarios/" />
+  </url>
+
+  <url>
+    <loc>https://www.kernesys.com/en/wms-inventory/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/wms-inventarios/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/wms-inventory/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/wms-inventarios/" />
+  </url>
+
+  <url>
+    <loc>https://www.kernesys.com/erp-crm-a-medida/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/erp-crm-a-medida/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/custom-erp-crm/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/erp-crm-a-medida/" />
+  </url>
+
+  <url>
+    <loc>https://www.kernesys.com/en/custom-erp-crm/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/erp-crm-a-medida/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/custom-erp-crm/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/erp-crm-a-medida/" />
+  </url>
+
+  <url>
+    <loc>https://www.kernesys.com/modernizacion-sistemas-legacy/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/modernizacion-sistemas-legacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/legacy-system-modernization/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/modernizacion-sistemas-legacy/" />
+  </url>
+
+  <url>
+    <loc>https://www.kernesys.com/en/legacy-system-modernization/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/modernizacion-sistemas-legacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/legacy-system-modernization/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/modernizacion-sistemas-legacy/" />
+  </url>
+
+  <url>
+    <loc>https://www.kernesys.com/integraciones-api/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/integraciones-api/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/api-integrations/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/integraciones-api/" />
+  </url>
+
+  <url>
+    <loc>https://www.kernesys.com/en/api-integrations/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/integraciones-api/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/api-integrations/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/integraciones-api/" />
+  </url>
+
+  <url>
+    <loc>https://www.kernesys.com/aplicaciones-moviles-empresariales/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/aplicaciones-moviles-empresariales/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/enterprise-mobile-apps/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/aplicaciones-moviles-empresariales/" />
+  </url>
+
+  <url>
+    <loc>https://www.kernesys.com/en/enterprise-mobile-apps/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/aplicaciones-moviles-empresariales/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/enterprise-mobile-apps/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/aplicaciones-moviles-empresariales/" />
+  </url>
+
+  <url>
+    <loc>https://www.kernesys.com/industrias/manufactura/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/industrias/manufactura/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/industries/manufacturing/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/industrias/manufactura/" />
+  </url>
+
+  <url>
+    <loc>https://www.kernesys.com/en/industries/manufacturing/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/industrias/manufactura/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/industries/manufacturing/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/industrias/manufactura/" />
+  </url>
+
+  <url>
+    <loc>https://www.kernesys.com/industrias/logistica/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/industrias/logistica/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/industries/logistics/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/industrias/logistica/" />
+  </url>
+
+  <url>
+    <loc>https://www.kernesys.com/en/industries/logistics/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/industrias/logistica/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/industries/logistics/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/industrias/logistica/" />
+  </url>
+
+  <url>
     <loc>https://www.kernesys.com/privacidad/</loc>
     <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/privacidad/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/privacidad/" />
+  </url>
+
+  <url>
+    <loc>https://www.kernesys.com/en/privacy/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/privacidad/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/privacidad/" />
   </url>
 
   <url>
     <loc>https://www.kernesys.com/terminos/</loc>
     <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/terminos/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/terms/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/terminos/" />
+  </url>
+
+  <url>
+    <loc>https://www.kernesys.com/en/terms/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/terminos/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/terms/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/terminos/" />
   </url>
 
 </urlset>
