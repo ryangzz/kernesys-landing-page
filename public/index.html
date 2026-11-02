@@ -27,6 +27,9 @@
   <meta name="application-name" content="Kernesys" />
   <meta name="apple-mobile-web-app-title" content="Kernesys" />
   <link rel="canonical" href="https://www.kernesys.com/" />
+  <link rel="alternate" hreflang="es" href="https://www.kernesys.com/" />
+  <link rel="alternate" hreflang="en" href="https://www.kernesys.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/" />
 
   <!-- ===== SEO local ===== -->
   <meta name="geo.region" content="MX-NLE" />
@@ -38,6 +41,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kernesys" />
   <meta property="og:locale" content="es_MX" />
+  <meta property="og:locale:alternate" content="en_US" />
   <meta property="og:url" content="https://www.kernesys.com/" />
   <meta property="og:title" content="Kernesys | Desarrollo de Software, WMS, TMS y MES en México" />
   <meta property="og:description" content="Consultora de software en Monterrey. Desarrollamos soluciones WMS, TMS y MES para almacenes, transporte, producción y trazabilidad operativa." />
@@ -230,7 +234,10 @@
         "@id": "https://www.kernesys.com/#website",
         "url": "https://www.kernesys.com/",
         "name": "Kernesys",
-        "inLanguage": "es-MX",
+        "inLanguage": [
+          "es-MX",
+          "en"
+        ],
         "publisher": {
           "@id": "https://www.kernesys.com/#organization"
         }
@@ -551,6 +558,18 @@
       html { scroll-behavior:auto; }
       *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
     }
+
+    /* ===== Selector de idioma (banderas) ===== */
+    .page-header .lang-switch { display:flex; align-items:center; gap:6px; order:3; }
+    .page-header .lang-link { display:inline-flex; padding:3px; border:2px solid transparent; border-radius:6px; opacity:.6; line-height:0; transition:opacity .2s ease, border-color .2s ease; }
+    .page-header .lang-link img { display:block; width:24px; height:16px; border-radius:3px; }
+    .page-header .lang-link:hover, .page-header .lang-link:focus-visible { opacity:1; }
+    .page-header .lang-link.is-active { opacity:1; border-color:rgba(255,255,255,.85); }
+    .page-header .lang-link:focus-visible { outline:3px solid #0a6bab; outline-offset:2px; }
+    @media (max-width: 1199px) {
+      .page-header .lang-switch { order:1; margin-left:auto; margin-right:1.25rem; }
+      .page-header .menu-toggler-btn { order:2; }
+    }
   </style>
 </head>
 
@@ -597,6 +616,10 @@
               <a class="nav-link" href="#contact-us"><i class="fas fa-mobile-alt icon" aria-hidden="true"></i>Contacto</a>
             </li>
           </ul>
+        </div>
+        <div class="lang-switch" role="group" aria-label="Idioma">
+          <a class="lang-link is-active" href="/" hreflang="es" lang="es" title="Español" aria-current="page"><img src="/img/flags/mx.svg" alt="Español" width="24" height="16" /></a>
+          <a class="lang-link" href="/en/" hreflang="en" lang="en" title="View in English"><img src="/img/flags/us.svg" alt="English" width="24" height="16" /></a>
         </div>
       </nav>
     </div>
@@ -1969,7 +1992,7 @@
   <!-- ===== Scripts (todos diferidos; sin jQuery) ===== -->
   <script src="js/swiper.min.js" defer></script>
   <script src="js/splitting.min.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js?v=20261101" defer></script>
 </body>
 
 </html>

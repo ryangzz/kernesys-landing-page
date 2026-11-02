@@ -31,6 +31,26 @@ h1, h2, h3 { color: var(--ink); line-height: 1.25; margin: 0; }
 .lp-nav .btn-primary { color: var(--brand); }
 @media (max-width: 760px) { .lp-nav .lp-nav-link { display: none; } }
 
+/* Selector de idioma (banderas MX / US) */
+.lang-switch { display: inline-flex; align-items: center; gap: 6px; }
+.lang-switch .lang-link { display: inline-flex; padding: 3px; border: 2px solid transparent; border-radius: 6px; opacity: .6; line-height: 0; transition: opacity .2s ease, border-color .2s ease; }
+.lang-switch .lang-link img { display: block; width: 24px; height: 16px; border-radius: 3px; }
+.lang-switch .lang-link:hover, .lang-switch .lang-link:focus-visible { opacity: 1; }
+.lang-switch .lang-link.is-active { opacity: 1; border-color: rgba(255,255,255,.85); }
+.lang-switch .lang-link:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+@media (max-width: 480px) {
+  .lp-logo img { height: 30px; }
+  .lp-nav { gap: 10px; }
+  .lp-nav .btn-sm { padding: 7px 12px; font-size: .85rem; }
+  .lang-switch { gap: 4px; }
+  .lang-switch .lang-link { padding: 2px; }
+}
+@media (max-width: 360px) {
+  .lp-logo img { height: 26px; }
+  .lp-nav { gap: 8px; }
+  .lang-switch .lang-link img { width: 22px; height: 15px; }
+}
+
 /* Botones */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;

@@ -51,3 +51,18 @@ Las soluciones TMS pueden apoyar a las empresas en el control de información, e
 - [Software para logística y transporte (TMS, WMS)](https://www.kernesys.com/industrias/logistica/)
 - [Aviso de Privacidad](https://www.kernesys.com/privacidad/)
 - [Términos de Uso](https://www.kernesys.com/terminos/)
+
+## Páginas en inglés (English version)
+The site is also available in English under /en/. Every page has a Spanish and an English version.
+- [Home](https://www.kernesys.com/en/): services, case studies, technologies, FAQ and contact form
+- [About us](https://www.kernesys.com/en/about/): mission, team, track record and methodology
+- [Custom software in Monterrey](https://www.kernesys.com/en/custom-software-monterrey/)
+- [WMS and inventory software](https://www.kernesys.com/en/wms-inventory/)
+- [Custom ERP and CRM](https://www.kernesys.com/en/custom-erp-crm/)
+- [Legacy system modernization](https://www.kernesys.com/en/legacy-system-modernization/)
+- [Systems integration and APIs](https://www.kernesys.com/en/api-integrations/)
+- [Enterprise mobile apps](https://www.kernesys.com/en/enterprise-mobile-apps/)
+- [Manufacturing software (MES, WMS, ERP)](https://www.kernesys.com/en/industries/manufacturing/)
+- [Logistics and transportation software (TMS, WMS)](https://www.kernesys.com/en/industries/logistics/)
+- [Privacy Notice](https://www.kernesys.com/en/privacy/)
+- [Terms of Use](https://www.kernesys.com/en/terms/)

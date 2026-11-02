@@ -71,6 +71,11 @@ formulario AJAX, páginas legales, 404, contadores visibles, un solo H1 y FAQ vi
   - [ ] Agregar nombres, puestos y fotos reales del equipo (hoy se describe por perfiles, sin nombres)
   - [ ] Agregar hitos con fecha a la trayectoria (hoy solo 2019 y "Hoy")
   - [ ] Confirmar los perfiles del equipo y los principios ("Lo que nos guía")
+- [x] **Versión en inglés** de todas las páginas bajo `/en/`, con banderas MX/US en el navbar, `hreflang`, `sitemap.xml`, `llms.txt` y 404 en inglés
+      (regla en `CLAUDE.md`: todo cambio en una página se replica en su contraparte)
+  - [ ] Revisar los textos en inglés, de preferencia con un hablante nativo
+  - [ ] Confirmar que quien atiende el formulario y WhatsApp puede responder en inglés (los mensajes del sitio en inglés llegan en inglés; el formulario se identifica como "Sitio web Kernesys (EN)")
+  - [ ] Volver a enviar `sitemap.xml` en Search Console para que indexe las páginas en inglés
 - [ ] **Página o sección de proceso de trabajo** (diagnóstico → alcance → sprints → despliegue → soporte)
 - [ ] **Testimonios** con nombre, cargo, empresa y resultado
 - [ ] **Sustituir imágenes de banco** (hero, Nosotros, sello "Best Quality Guarantee") por capturas reales de sistemas, diagramas o fotos del equipo
@@ -84,7 +89,7 @@ formulario AJAX, páginas legales, 404, contadores visibles, un solo H1 y FAQ vi
 
 ## 4. Legal
 
-- [ ] **Revisar el Aviso de Privacidad**:
+- [ ] **Revisar el Aviso de Privacidad** (y su versión en inglés, `/en/privacy/`):
   - [ ] Dice que se usa Google Analytics, pero hoy no está instalado (corregir o instalarlo)
   - [ ] Los datos del formulario los procesa Web3Forms (tercero); mencionarlo
   - [ ] Agregar la identidad y el domicilio del responsable, como exige la LFPDPPP

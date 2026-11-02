@@ -60,3 +60,11 @@
 # El sitio ya es HTML estático. Las URLs inexistentes devuelven 404 real
 # (Netlify sirve public/404.html automáticamente) en lugar de la home con 200,
 # que Google trataba como "soft 404" / contenido duplicado.
+
+# ===== 404 en inglés =====
+# Las URLs inexistentes bajo /en/ muestran la página 404 en inglés.
+# (Netlify solo aplica esta regla cuando no existe un archivo en esa ruta.)
+[[redirects]]
+  from = "/en/*"
+  to = "/en/404.html"
+  status = 404
